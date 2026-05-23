@@ -1,14 +1,16 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import LayoutNav from '@/views/Layout/components/LayoutNav.vue'
+import LayoutHeader from '@/views/Layout/components/LayoutHeader.vue'
+import LayoutFooter from '@/views/Layout/components/LayoutFooter.vue'
 
 </script>
 
 <template>
-
-我是首页
-<router-view></router-view>
+  <LayoutNav />
+  <LayoutHeader />
+  <router-view></router-view>
+  <LayoutFooter />
 </template>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
