@@ -1,4 +1,8 @@
 # vue-rabbit
+我的跟黑马练习的小兔鲜肉项目
+f74fb75b218f21ed4e27cacb694874ff36430a58
+
+
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -33,3 +37,4 @@ pnpm build
 ```sh
 pnpm lint
 ```
+
