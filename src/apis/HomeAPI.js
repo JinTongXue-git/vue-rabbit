@@ -8,6 +8,20 @@ export function getHomeBannerApi() {
   })
 }
 
+/**
+ * @description: 获取新鲜好物
+ * @param {*}
+ * @return {*}
+ */
+export function getNewApi(){
+  return httpInstance({
+    url: '/home/new'
+  })
+}
+
+
+
+
 
 
 
