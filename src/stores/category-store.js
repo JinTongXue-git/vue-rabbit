@@ -1,7 +1,7 @@
 
 import {ref } from 'vue'
 import { defineStore } from 'pinia'
-import { getCategoryApi } from '@/apis/CategoryAPI'
+import { getCategoryApi } from '@/apis/LayoutAPI'
 
 
 /**
