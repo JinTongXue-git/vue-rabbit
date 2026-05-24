@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Login from '@/views/Login/index.vue'
 import Layout from '@/views/Layout/index.vue'
 import Home from '@/views/Home/index.vue'
@@ -8,8 +8,8 @@ import Category from '@/views/Category/index.vue'
 // 创建路由实例
 const router = createRouter({
 
-  // 路由模式 history 模式
-  history: createWebHistory(),
+  // GitHub Pages 部署使用 Hash 模式
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',

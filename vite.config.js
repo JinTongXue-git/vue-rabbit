@@ -26,6 +26,8 @@ export default defineConfig({
       ],
     }),
   ],
+  // GitHub Pages 部署需要配置 base 路径
+  base: '/vue-rabbit/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
