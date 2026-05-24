@@ -8,6 +8,8 @@ export function getHomeBannerApi() {
   })
 }
 
+
+
 /**
  * @description: 获取新鲜好物
  * @param {*}
@@ -19,6 +21,19 @@ export function getNewApi(){
   })
 }
 
+
+
+/**
+ * @description: 获取人气推荐
+ * @param {*}
+ * @return {*}
+ */
+export function getHotApi() {
+  return  httpInstance({
+    url: '/home/hot',
+    method: 'GET'
+  })
+}
 
 
 
