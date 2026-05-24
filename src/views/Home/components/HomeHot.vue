@@ -25,7 +25,12 @@ onMounted(() => {
       <ul class="goods-list">
         <li v-for="item in hotList" :key="item.id">
           <RouterLink to="/">
-            <img :src="item.picture" alt="">
+            <!-- 自定义指令，用这个 V杠 image立方绑定这个 image 标签，
+             然后这个时候就可以通过这个v-img-lazy找到这个 img 标签，
+             然后它这里的值是这个 item picture，这里面是我从外部调用进来的那个。
+             调用进来的一个这个 URL 相片的地址。 -->
+            <!-- <img :src="item.picture" alt=""> -->
+            <img v-img-lazy="item.picture"  alt="">
             <p class="name">{{ item.title }}</p>
             <p class="desc">{{ item.alt }}</p>
           </RouterLink>
