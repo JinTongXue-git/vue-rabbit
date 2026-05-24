@@ -16,7 +16,8 @@ import { useCategoryStore } from '@/stores/category-store.js'
           <router-link to="/"> 首页</router-link>
         </li>
         <li class="home" v-for="item in useCategoryStore().categoryList" :key="item.id" >
-          <RouterLink to="/">{{ item.name }}</RouterLink>
+          <!-- 一级分类路由链接 -->
+          <router-link :to="`/category/${item.id}`">{{ item.name }}</router-link>
         </li>
         <!-- <li> <RouterLink to="/">居家</RouterLink> </li>
         <li> <RouterLink to="/">美食</RouterLink> </li>
