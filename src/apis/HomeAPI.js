@@ -37,7 +37,17 @@ export function getHotApi() {
 
 
 
-
+/**
+ * @description: 获取所有商品模块
+ * @param {*}
+ * @return {*}
+ */
+export function getGoodsApi(){
+  return httpInstance({
+    url: '/home/goods',
+    method: 'GET' 
+  })
+}
 
 
 

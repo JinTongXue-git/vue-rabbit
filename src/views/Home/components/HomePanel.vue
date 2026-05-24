@@ -3,11 +3,11 @@
 defineProps({
   title: {
     type: String,
-    default: '新鲜好物'
+    default: ''
   },
   subTitle: {
     type: String,
-    default: '新鲜出炉 品质靠谱'
+    default: ''
   }
 })
 
