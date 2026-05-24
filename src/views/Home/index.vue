@@ -1,20 +1,21 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import HomeCategory  from '@/views/Home/components/HomeCategory.vue';
+import HomeBanner from '@/views/Home/components/HomeBanner.vue'
+import HomeNew from '@/views/Home/components/HomeNew.vue';
+import HomeHot from '@/views/Home/components/HomeHot.vue'
+import HomeProduct from '@/views/Home/components/HomeProduct.vue'
 
 </script>
 
 <template>
-  <div>
-    <h1>我是首页</h1>
+  <div class="container">
+    <HomeCategory />
+    <HomeBanner />
   </div>
-
+  <HomeNew />
+  <HomeHot />
+  <HomeProduct />
 </template>
 
 <style scoped lang="scss">
-div {
-  height: 1000px;
-}
-h1 {
-  color: red;
-}
 </style>
