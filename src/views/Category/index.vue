@@ -4,6 +4,13 @@ import { getCategoryApi01 } from '@/apis/CategoryAPI'  // 获取分类详情的�
 import { useRoute } from 'vue-router'                   // 用来获取路由参数
 import { onMounted, ref } from 'vue'                   // 生命周期钩子和响应式变量
 
+import { getHomeBannerApi } from '@/apis/HomeAPI'
+
+
+const bannerList = ref([])
+
+
+
 // ========================================
 // 1. 获取路由参数（就是从 URL 里拿到分类 ID）
 // ========================================
@@ -22,14 +29,25 @@ const categoryDetail = ref({})
 // ========================================
 onMounted(() => {
   // 调用接口，传入分类 ID
-  getCategoryApi01(categoryId).then(res => {
-    console.log('一级分类详情数据:', res)
-    // 把接口返回的数据存到 categoryDetail 里
-    categoryDetail.value = res.result
-  }).catch(err => {
-    // 如果请求失败，打印错误信息
-    console.error('获取分类详情失败:', err)
-  })
+  getCategoryApi01(categoryId)
+    .then(res => {
+      console.log('一级分类详情数据:', res)
+      // 把接口返回的数据存到 categoryDetail 里
+      categoryDetail.value = res.result
+    }).catch(err => {
+      // 如果请求失败，打印错误信息
+      console.error('获取分类详情失败:', err)
+    })
+
+
+  // 获取banner
+  getHomeBannerApi({ distributionSite: '2' })
+    .then(res => {
+      console.log(res)
+      bannerList.value = res.result
+    }).catch(err => {
+      console.log(err)
+    })
 })
 
 
@@ -46,6 +64,16 @@ onMounted(() => {
           <el-breadcrumb-item>{{ categoryDetail.name }}</el-breadcrumb-item>
         </el-breadcrumb>
       </div>
+
+      <!-- 轮播图 -->
+      <div class="home-banner">
+        <el-carousel height="500px">
+          <el-carousel-item v-for="item in bannerList" :key="item.id">
+            <img :src="item.imgUrl" alt="">
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+
     </div>
   </div>
 </template>
@@ -127,6 +155,22 @@ onMounted(() => {
 
   .bread-container {
     padding: 25px 0;
+  }
+}
+
+
+.home-banner {
+  width: 1240px;
+  height: 500px;
+  margin: 0 auto;
+  // position: absolute;
+  // left: 0;
+  // top: 0;
+  // z-index: 98;
+
+  img {
+    width: 100%;
+    height: 500px;
   }
 }
 </style>
