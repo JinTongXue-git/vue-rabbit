@@ -1,8 +1,9 @@
 
-import {ref } from 'vue'
+import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import { getCategoryApi } from '@/apis/LayoutAPI'
 
+import { onMounted } from 'vue'
 
 /**
  * 分类数据状态管理 Store
@@ -30,16 +31,16 @@ import { getCategoryApi } from '@/apis/LayoutAPI'
  */
 
 
-export const useCategoryStore = defineStore('category-store' , () => {
-  const categoryList = ref([])
+export const useCategoryStore = defineStore('category-store', () => {
 
-  async function getCategory (){
+  const categoryList = ref([])
+  async function getCategory() {
 
     // 1. 先尝试读取本地 JSON 文件
     try {
       console.log('📦 尝试读取本地分类数据...')
       const response = await fetch('/data/home-category.json')
-      
+
       if (response.ok) {
         const data = await response.json()
         categoryList.value = data.result
@@ -71,6 +72,8 @@ export const useCategoryStore = defineStore('category-store' , () => {
     }
 
   }
+
+
 
   return {
     categoryList,

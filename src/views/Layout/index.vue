@@ -13,13 +13,15 @@ import { useCategoryStore } from '@/stores/category-store.js'
 onMounted(() => {
   useCategoryStore().getCategory()
 })
+
 </script>
 
 <template>
   <LayoutFixed />
   <LayoutNav />
   <LayoutHeader />
-  <router-view></router-view>
+  <!-- 添加key 破坏复用机制 强制渲染 :key="$router.fullPath" -->
+  <router-view ></router-view>
   <LayoutFooter />
 </template>
 

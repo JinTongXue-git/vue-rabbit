@@ -1,7 +1,6 @@
 
-
 // 导入封装好的 axios 实例
-import httpInstance from "@/utils/http";
+import httpInstance from '@/utils/http.js'
 
 /**
  * 获取一级分类详情

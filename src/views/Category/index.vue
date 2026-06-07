@@ -1,44 +1,10 @@
 <script setup>
-import { getCategoryApi01 } from '@/apis/CategoryAPI'  // 获取分类详情的接口
-import { useRoute } from 'vue-router'                   // 用来获取路由参数
-import { onMounted, ref } from 'vue'                   // 生命周期钩子和响应式变量
-import { getHomeBannerApi } from '@/apis/HomeAPI'
-
 import GoodsItem from '@/views/Home/components/GoodsItem.vue'
+import { useBanner } from '@/views/Category/composables/useBanner'
+import { useCategory } from '@/views/Category/composables/useCategory'
 
-const bannerList = ref([])
-
-// 1. 获取路由参数（就是从 URL 里拿到分类 ID）
-// 比如 URL 是 /category/1，那这里拿到的 id 就是 '1'
-const route = useRoute()
-const categoryId = route.params.id  // 把变量名改得更有意义一些
-
-// 2. 定义响应式数据
-// 用来存储分类详情数据，比如分类名称、子分类列表这些
-const categoryDetail = ref({})
-
-// 3. 页面加载时获取数据
-onMounted(() => {
-  // 调用接口，传入分类 ID
-  getCategoryApi01(categoryId)
-    .then(res => {
-      console.log('一级分类详情数据:', res)
-      // 把接口返回的数据存到 categoryDetail 里
-      categoryDetail.value = res.result
-    }).catch(err => {
-      // 如果请求失败，打印错误信息
-      console.error('获取分类详情失败:', err)
-    })
-
-  // 获取banner
-  getHomeBannerApi({ distributionSite: '2' })
-    .then(res => {
-      console.log(res)
-      bannerList.value = res.result
-    }).catch(err => {
-      console.log(err)
-    })
-})
+const { bannerList } = useBanner()
+const { categoryDetail } = useCategory()
 
 
 </script>
@@ -79,7 +45,7 @@ onMounted(() => {
               <h3>- {{ item.name }}-</h3>
             </div>
             <div class="body">
-              <GoodsItem v-for="good in item.goods" :goods="good" :key="good.id" />
+              <GoodsItem v-for="good in item.goods" :good="good" :key="good.id" />
             </div>
       </div>
 
