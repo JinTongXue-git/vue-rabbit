@@ -1,29 +1,30 @@
 <script setup>
 import HomePanel from '@/views/Home/components/HomePanel.vue'
-import { ref, onMounted } from 'vue'
-import { getHotApi } from '@/apis/HomeAPI.js'
+import { useHomeStore } from '@/stores/home-store.js'
+
+// import { ref, onMounted } from 'vue'
+// import { getHotApi } from '@/apis/HomeAPI.js'
+// // 存储人气推荐列表
+// const hotList = ref([])
+// // 在页面挂载后 获取人气推荐列表
+// onMounted(() => {
+//   getHotApi()
+//     .then((result) => {
+//       console.log('hot:', result);
+//       hotList.value = result.result
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     })
+// })
 
 
-
-// 存储人气推荐列表
-const hotList = ref([])
-// 在页面挂载后 获取人气推荐列表
-onMounted(() => {
-  getHotApi()
-    .then((result) => {
-      console.log('hot:', result);
-      hotList.value = result.result
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-})
 </script>
 <template>
   <HomePanel title="人气推荐" sub-title="人气爆款 不容错过">
     <template #main>
       <ul class="goods-list">
-        <li v-for="item in hotList" :key="item.id">
+        <li v-for="item in useHomeStore().hotList" :key="item.id">
           <RouterLink to="/">
             <!-- 自定义指令，用这个 V杠 image立方绑定这个 image 标签，
              然后这个时候就可以通过这个v-img-lazy找到这个 img 标签，

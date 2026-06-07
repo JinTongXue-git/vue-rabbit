@@ -1,25 +1,26 @@
 <script setup>
 import HomePanel from './HomePanel.vue'
-import { getGoodsApi } from '@/apis/HomeAPI'
-import { ref, onMounted } from 'vue'
 import GoodsItem from '@/views/Home/components/GoodsItem.vue'
 
-const goodsProductList = ref([])
+import { useHomeStore } from '@/stores/home-store.js'
 
-onMounted(() => {
-  getGoodsApi().then(res => {
-    console.log(res)
-    goodsProductList.value = res.result
-  }).catch(err => {
-    console.log(err)
-  })
-})
+// import { getGoodsApi } from '@/apis/HomeAPI'
+// import { ref, onMounted } from 'vue'
+// const goodsProductList = ref([])
+// onMounted(() => {
+//   getGoodsApi().then(res => {
+//     console.log(res)
+//     goodsProductList.value = res.result
+//   }).catch(err => {
+//     console.log(err)
+//   })
+// })
 
 </script>
 
 <template>
   <div class="home-product">
-    <HomePanel :title="cate.name" v-for="cate in goodsProductList" :key="cate.id">
+    <HomePanel :title="cate.name" v-for="cate in useHomeStore().goodsProductList" :key="cate.id">
       <template #main>
         <div class="box">
           <RouterLink class="cover" to="/">

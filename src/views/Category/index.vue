@@ -1,32 +1,23 @@
 <script setup>
-// 导入需要用到的东西
 import { getCategoryApi01 } from '@/apis/CategoryAPI'  // 获取分类详情的接口
 import { useRoute } from 'vue-router'                   // 用来获取路由参数
 import { onMounted, ref } from 'vue'                   // 生命周期钩子和响应式变量
-
 import { getHomeBannerApi } from '@/apis/HomeAPI'
 
+import GoodsItem from '@/views/Home/components/GoodsItem.vue'
 
 const bannerList = ref([])
 
-
-
-// ========================================
 // 1. 获取路由参数（就是从 URL 里拿到分类 ID）
-// ========================================
 // 比如 URL 是 /category/1，那这里拿到的 id 就是 '1'
 const route = useRoute()
 const categoryId = route.params.id  // 把变量名改得更有意义一些
 
-// ========================================
 // 2. 定义响应式数据
-// ========================================
 // 用来存储分类详情数据，比如分类名称、子分类列表这些
 const categoryDetail = ref({})
 
-// ========================================
 // 3. 页面加载时获取数据
-// ========================================
 onMounted(() => {
   // 调用接口，传入分类 ID
   getCategoryApi01(categoryId)
@@ -39,7 +30,6 @@ onMounted(() => {
       console.error('获取分类详情失败:', err)
     })
 
-
   // 获取banner
   getHomeBannerApi({ distributionSite: '2' })
     .then(res => {
@@ -51,9 +41,7 @@ onMounted(() => {
 })
 
 
-
 </script>
-
 <template>
   <div class="top-category">
     <div class="container m-top-20">
@@ -73,6 +61,28 @@ onMounted(() => {
           </el-carousel-item>
         </el-carousel>
       </div>
+       <!--分类列表渲染  -->
+      <div class="sub-list">
+            <h3>全部分类</h3>
+            <ul>
+              <li v-for="i in categoryDetail.children" :key="i.id">
+                <RouterLink to="/">
+                  <img :src="i.picture" />
+                  <p>{{ i.name }}</p>
+                </RouterLink>
+              </li>
+            </ul>
+      </div>
+
+      <div class="ref-goods" v-for="item in categoryDetail.children" :key="item.id">
+            <div class="head">
+              <h3>- {{ item.name }}-</h3>
+            </div>
+            <div class="body">
+              <GoodsItem v-for="good in item.goods" :goods="good" :key="good.id" />
+            </div>
+      </div>
+
 
     </div>
   </div>

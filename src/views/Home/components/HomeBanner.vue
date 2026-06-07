@@ -1,9 +1,8 @@
 <script setup>
-import { getHomeBannerApi } from '@/apis/HomeAPI.js'
-import { ref, onMounted } from 'vue'
-
+// import { getHomeBannerApi } from '@/apis/HomeAPI.js'
+// import { ref, onMounted } from 'vue'
+/* 
 const bannerList = ref([])
-
 onMounted(() => {
   getHomeBannerApi()
   .then(res => {
@@ -13,18 +12,23 @@ onMounted(() => {
     console.log(err)
   })
 })
+*/
+
+
+import { useHomeStore } from '@/stores/home-store.js' 
+
 </script>
+
 
 <template>
   <div class="home-banner">
     <el-carousel height="500px">
-      <el-carousel-item v-for="item in bannerList" :key="item.id">
+      <el-carousel-item v-for="item in useHomeStore().bannerList" :key="item.id">
         <img :src="item.imgUrl" alt="">
       </el-carousel-item>
     </el-carousel>
   </div>
 </template>
-
 
 
 <style scoped lang='scss'>
@@ -42,3 +46,5 @@ onMounted(() => {
   }
 }
 </style>
+
+

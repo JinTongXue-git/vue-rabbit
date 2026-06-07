@@ -1,0 +1,323 @@
+{
+  "code": "1",
+  "msg": "操作成功",
+  "result": {
+    "id": "1005002",
+    "name": "美食",
+    "picture": null,
+    "children": [
+      {
+        "id": "1005012",
+        "name": "南北干货",
+        "picture": "https://yanxuan.nosdn.127.net/9af51a1090fd32f668b14451f06d6e72.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "1189003",
+            "name": "古田糯耳150克",
+            "desc": "加热易糯，一煮即稠",
+            "price": "26.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/e8534f5e88af5aa5366786998c84543f.png",
+            "orderNum": 5725
+          },
+          {
+            "id": "1189004",
+            "name": "竹荪25克",
+            "desc": "菌中皇后，汤品添鲜",
+            "price": "28.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/c74e739833078c887a7d275c1caf81b5.png",
+            "orderNum": 35
+          },
+          {
+            "id": "1188005",
+            "name": "莆田桂圆肉368克",
+            "desc": "香甜滑软，弹嫩甘糯",
+            "price": "52.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/92b975037935a47835737e6bb2611a39.jpg",
+            "orderNum": 4327
+          },
+          {
+            "id": "1189007",
+            "name": "无芯软糯的萌妹子，建宁莲子228克",
+            "desc": "建莲佳品，稍炖即糯",
+            "price": "45.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/0e43fa53f61ddf37926fad3b7a3c2688.jpg",
+            "orderNum": 73
+          },
+          {
+            "id": "1189005",
+            "name": "楼兰灰枣328克",
+            "desc": "肉实质脆，枣香浓郁",
+            "price": "26.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/63aedbfedf9423b2b3109ee0e04b9dc4.png",
+            "orderNum": 5844
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "1036003",
+        "name": "调味酱菜",
+        "picture": "https://yanxuan.nosdn.127.net/5fae33a840870b487cc903535383bf97.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "1135059",
+            "name": "手工八年老陈醋500毫升",
+            "desc": "地道醇香，醋酸浓郁",
+            "price": "30.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/77da20e77b02830a26f931901ac1a9e0.png",
+            "orderNum": 28
+          },
+          {
+            "id": "3419049",
+            "name": "下饭神器酸豆角50克*10袋",
+            "desc": "180天土窖腌制，酸爽脆嫩",
+            "price": "16.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/b7808ed03474fa33626571cdbd7f0ae6.jpg",
+            "orderNum": 6675
+          },
+          {
+            "id": "3388018",
+            "name": "组合装牛油300克+清油110克*2+番茄110克*2",
+            "desc": "川渝火锅魂，地道重庆味",
+            "price": "32.80",
+            "picture": "https://yanxuan-item.nosdn.127.net/e0c1ffa060d1fd8b81a720212d684945.png",
+            "orderNum": 2980
+          },
+          {
+            "id": "1545002",
+            "name": "三分钟即享简餐，日式即食咖喱150克",
+            "desc": "日式风味，甘香醇厚",
+            "price": "15.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/3a3d282779030c70e67dc0825ede50d3.png",
+            "orderNum": 34
+          },
+          {
+            "id": "3409008",
+            "name": "从江香猪油辣椒218克",
+            "desc": "油润爽辣，苗家手作",
+            "price": "28.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/e06457f58b2cec3578c539c7b3cbfebe.png",
+            "orderNum": 111
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109201001",
+        "name": "方便食品",
+        "picture": "https://yanxuan.nosdn.127.net/f9872b4aad6c0a943d45629ac96ee8d3.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "1691024",
+            "name": "地道卤香好味道，桂林鲜米粉245克*6盒",
+            "desc": "无人工添加防腐剂，鲜嫩爽滑",
+            "price": "69.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/26d71d6eb4c00ed727ad9f54ae4ce553.png",
+            "orderNum": 78
+          },
+          {
+            "id": "1292003",
+            "name": "大丈夫方便面轻巧款私房牛肉味64克*6杯",
+            "desc": "非油炸，好吃不上火",
+            "price": "28.50",
+            "picture": "https://yanxuan-item.nosdn.127.net/38e41a417612d3a419ab6fc6183593b2.jpg",
+            "orderNum": 3716
+          },
+          {
+            "id": "1293000",
+            "name": "北海道风味大虾面61克*6杯",
+            "desc": "看得见的大只虾仁，吃得到的日式风味",
+            "price": "39.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/53992e4eb8ec385406038bf307e42ef7.jpg",
+            "orderNum": 40
+          },
+          {
+            "id": "3452050",
+            "name": "冻干藤椒牛肉面70克*12盒",
+            "desc": "椒麻爽辣，面弹肉香，地道川味",
+            "price": "79.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/8821731cd2743ae4932f16e71feeecfa.png",
+            "orderNum": 47
+          },
+          {
+            "id": "3464033",
+            "name": "冻干藤椒豚骨面74克*12盒",
+            "desc": "日式风味，汤浓肉鲜，椒麻过瘾",
+            "price": "79.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/7a5ffe313fe5671709d5a9826f5a83a2.jpg",
+            "orderNum": 54
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109206007",
+        "name": "米面粮油",
+        "picture": "https://yanxuan.nosdn.127.net/8578759aed2268f7aa8641273cac7cb3.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "1135079",
+            "name": "免浸泡，12种谷物一次同享，五谷米400克",
+            "desc": "无需浸泡，同煮同熟",
+            "price": "9.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/bfe70bd66efe94f2f18061c707d2a097.png",
+            "orderNum": 33
+          },
+          {
+            "id": "1135080",
+            "name": "加量50%不加价，贵州兴仁薏仁米600克",
+            "desc": "粒粒饱满，颗颗香糯",
+            "price": "19.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/3e93790bba8db8aab54ee5ba72799567.png",
+            "orderNum": 1850
+          },
+          {
+            "id": "1135075",
+            "name": "来自东北的“黑珍珠”，黑米470克*3袋",
+            "desc": "米汁香稠，Q弹醇香",
+            "price": "42.80",
+            "picture": "https://yanxuan-item.nosdn.127.net/1452cfeb14b5d252fb1ba97b278e9cc3.png",
+            "orderNum": 13336
+          },
+          {
+            "id": "1269010",
+            "name": "什锦素食粥米500克",
+            "desc": "谷香米糯，营养美味",
+            "price": "9.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/dc4826ddb838d8e17f90402adfa3f4fe.png",
+            "orderNum": 46
+          },
+          {
+            "id": "1135076",
+            "name": "红小豆450克*3袋",
+            "desc": "皮薄易煮，粒粒香甜",
+            "price": "42.80",
+            "picture": "https://yanxuan-item.nosdn.127.net/eaec90be370a438e565e10189b7a390a.png",
+            "orderNum": 39
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109264007",
+        "name": "名酒馆",
+        "picture": "https://yanxuan.nosdn.127.net/91413b1476a0697bb0592609a42d4498.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "3998106",
+            "name": "德国莫泽尔传统版雷司令干白2019750ml",
+            "desc": "来自摩泽尔传奇名庄",
+            "price": "138.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/bcb8efeee3977d417b961c1eba4584a5.jpg",
+            "orderNum": 69
+          },
+          {
+            "id": "3997547",
+            "name": "泸州老窖特曲浓香型白酒",
+            "desc": "非遗工艺制作，历经24代传承，至今690余年",
+            "price": "280.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/4f67876d44c4c0e318153c02cdfc701f.png",
+            "orderNum": 14849
+          },
+          {
+            "id": "3995885",
+            "name": "飞天53%vol500ml贵州茅台酒（带杯）",
+            "desc": "茅台飘香，正品溯源",
+            "price": "1499.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/d46e005025a5d3b73c4781d31b327558.jpg",
+            "orderNum": 5753
+          },
+          {
+            "id": "3399000",
+            "name": "玛歌正牌干红750毫升2017年",
+            "desc": "波尔多五大名庄玛歌正牌",
+            "price": "6699.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/9e915c0a8839fa72b6ee1f9600289b62.png",
+            "orderNum": 3835
+          },
+          {
+            "id": "3463003",
+            "name": "法国年份雅文邑700毫升",
+            "desc": "经典产区限量单一老年份",
+            "price": "1480.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/0a2fff6e0b55178fbbe99d97d94d20a8.png",
+            "orderNum": 60
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109285003",
+        "name": "进口酒",
+        "picture": "https://yanxuan.nosdn.127.net/bf705060f01b60fe9c11c345931b1891.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "3407009",
+            "name": "苏格兰陈年单一麦芽威士忌700毫升",
+            "desc": "蒸馏大师监制",
+            "price": "318.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/a0a334a93e3d2bba7592ac692e045a48.png",
+            "orderNum": 6006
+          },
+          {
+            "id": "1505052",
+            "name": "百年名庄出品，法国南部干红750毫升",
+            "desc": "法国原产，原瓶进口",
+            "price": "58.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/d27c759b53d5aea5145c68eb96765df8.png",
+            "orderNum": 5750
+          },
+          {
+            "id": "1471002",
+            "name": "列级名庄出品，法国普罗旺斯桃红750毫升",
+            "desc": "普罗旺斯列级酒庄，优雅精致",
+            "price": "118.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/bc033185ab24f5e541e77b198adee609.jpg",
+            "orderNum": 5242
+          },
+          {
+            "id": "1425007",
+            "name": "名庄金奖加身，西班牙珍藏干红750毫升",
+            "desc": "产区名庄，囊获大奖",
+            "price": "168.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/ab17be62ad1262087b557139d5fc5b94.png",
+            "orderNum": 3185
+          },
+          {
+            "id": "1425011",
+            "name": "经典品种交响曲，智利混酿干白750毫升",
+            "desc": "智利名庄，香气迷人",
+            "price": "69.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/54008a874beec5abf5dc948799ee2e24.png",
+            "orderNum": 4415
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      }
+    ]
+  }
+}

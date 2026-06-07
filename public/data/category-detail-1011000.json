@@ -1,0 +1,323 @@
+{
+  "code": "1",
+  "msg": "操作成功",
+  "result": {
+    "id": "1011000",
+    "name": "母婴",
+    "picture": null,
+    "children": [
+      {
+        "id": "1020003",
+        "name": "T恤/polo/衬衫",
+        "picture": "https://yanxuan.nosdn.127.net/1f0089afcec911db7202fbcdae57d5f8.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "4026450",
+            "name": "趣味小恐龙绣花，男童灯芯绒衬衫",
+            "desc": "趣味小恐龙绣花，满版老虎印花，5色可选",
+            "price": "89.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/e68d406a58622a8d850de442aacfcf2e.jpg",
+            "orderNum": 17640
+          },
+          {
+            "id": "4007498",
+            "name": "ins风小碎花泡泡袖衬110-160cm",
+            "desc": "全棉面料，高支高密底布，手感柔软舒适，贴身穿着亲肤透气；经典娃娃衫，泡泡袖设计，增添可爱蓬松感；后背全开门襟，方便穿脱。",
+            "price": "99.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/c07edde1047fa1bd0b795bed136c2bb2.jpg",
+            "orderNum": 10693
+          },
+          {
+            "id": "4007902",
+            "name": "纯棉舒适女童印花荷叶袖小衫90-140cm",
+            "desc": "圈圈花图案，拼接大喇叭袖型",
+            "price": "139.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/11d0160b0a30c344d1b250c3e613fbb7.jpg",
+            "orderNum": 1580
+          },
+          {
+            "id": "4026178",
+            "name": "经典格子元素，男童格子纯棉衬衫",
+            "desc": "经典格子元素，侧边小贴袋装饰，5色可选",
+            "price": "89.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/22cba953b8239943c6db9cd0715bc2d2.jpg",
+            "orderNum": 3190
+          },
+          {
+            "id": "3994470",
+            "name": "复古格调，儿童灯芯绒衬衫73-130cm",
+            "desc": "竖条灯芯绒纹理，凸显肌理层次",
+            "price": "99.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/09ae7983369f9ddfba6ea96670ca84a7.png",
+            "orderNum": 3438
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "1037006",
+        "name": "儿童鞋",
+        "picture": "https://yanxuan.nosdn.127.net/7fd14a409302391da16970981cacd336.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "3992495",
+            "name": "加绒更保暖，毛毛虫儿童运动鞋26码-35码",
+            "desc": "加厚紧密毛绒内里，温柔包裹双足",
+            "price": "108.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/cd7cbb6e172f2236e5f5714f050a15fb.jpg",
+            "orderNum": 3378
+          },
+          {
+            "id": "3991463",
+            "name": "雨天不湿脚，儿童萌趣雨鞋20-36码",
+            "desc": "舒适防滑，雨天行走更安心",
+            "price": "79.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/37aa0c734b6a78c8152611c678da71ad.png",
+            "orderNum": 3335
+          },
+          {
+            "id": "3989454",
+            "name": "舒适透气，毛毛虫儿童网眼运动鞋26-35码",
+            "desc": "透气网眼，陪你度过这个夏天",
+            "price": "129.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/0542fae3d3587dbf07e040306073aa83.jpg",
+            "orderNum": 551
+          },
+          {
+            "id": "1519011",
+            "name": "儿童网眼运动凉鞋（宽松版）25-32码",
+            "desc": "加大空间鞋头，码数无需拍大一码",
+            "price": "127.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/66072109da4f1e6ec56ea5eacaf3471c.png",
+            "orderNum": 504
+          },
+          {
+            "id": "3884023",
+            "name": "治愈寒冬，儿童羊皮毛一体雪地靴26-35码",
+            "desc": "羊皮毛一体，保暖舒适",
+            "price": "149.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/146f9a4a2ee4116a477771f51b311335.png",
+            "orderNum": 510
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109243018",
+        "name": "外套/套装",
+        "picture": "https://yanxuan.nosdn.127.net/773a8777f66c286f97af6d74a27d7fe1.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "3995846",
+            "name": "加绒加厚，儿童保暖时尚卫衣套装73-120cm",
+            "desc": "舒棉绒内里，抵御寒冬",
+            "price": "199.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/21d2e9b754487aa3030ce105493a9473.jpg",
+            "orderNum": 1076
+          },
+          {
+            "id": "3995206",
+            "name": "90%白鸭绒，儿童轻羽绒马甲73-130cm",
+            "desc": "儿童轻羽绒马甲，保暖常备单品",
+            "price": "99.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/f73b2672f87b2e336d206c56d4ea7d0f.png",
+            "orderNum": 31
+          },
+          {
+            "id": "3995195",
+            "name": "毛茸茸暖意，儿童羊羔绒外套73-120cm",
+            "desc": "宽松版型，搭出休闲风格",
+            "price": "99.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/1661541f80bc9776e64125b7d586c9e6.jpg",
+            "orderNum": 612
+          },
+          {
+            "id": "3994908",
+            "name": "90%白鸭绒，儿童棒球领轻薄羽绒服73-140cm",
+            "desc": "儿童棒球轻羽绒外套，保暖常备单品",
+            "price": "159.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/6d8d6772df51fa60c2e899a16ac34718.png",
+            "orderNum": 563
+          },
+          {
+            "id": "3994471",
+            "name": "甜酷运动风，儿童卫衣运动套装73-130cm",
+            "desc": "轻松搭配，一套活力尽显",
+            "price": "179.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/767fc11b88b1e7b795319cd78c65f72f.png",
+            "orderNum": 3296
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109243019",
+        "name": "裤子/裙装",
+        "picture": "https://yanxuan.nosdn.127.net/a8c52cea5f953019484a74883ad8f14b.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "4005108",
+            "name": "儿童亚麻夏凉宽松萝卜裤防蚊裤66-130cm",
+            "desc": "100%天然亚麻面料，凉爽舒适，透气不闷热",
+            "price": "95.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/2c61c7b96488f940904d697bdb401250.jpg",
+            "orderNum": 1323
+          },
+          {
+            "id": "4001239",
+            "name": "别致前口袋设计，儿童时尚PP运动裤",
+            "desc": "休闲运动活力，穿着舒适",
+            "price": "99.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/587fe5e2ebe807810ef30acb0a45afd1.jpg",
+            "orderNum": 482
+          },
+          {
+            "id": "4005109",
+            "name": "条纹CHIC风，女童字母条纹连衣裙73-130cm",
+            "desc": "甄选100%纯棉面料，手感细腻柔软，穿着舒适透气。",
+            "price": "99.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/1f79f14fd666bda2be3d100e90ef6b37.jpg",
+            "orderNum": 1700
+          },
+          {
+            "id": "4003104",
+            "name": "法式清新，长袖格纹连衣裙/衬衫110-160cm",
+            "desc": "复古色织小格纹，增添一份休闲时尚感",
+            "price": "129.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/48ad67400b3097d730ef0a5d6e7fb84a.png",
+            "orderNum": 748
+          },
+          {
+            "id": "3995844",
+            "name": "优质90%白鸭绒，儿童轻薄羽绒裤1-6岁",
+            "desc": "轻羽保暖，抵御寒冬",
+            "price": "129.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/f17d6260e7eb0cb805b796296f5f54b5.jpg",
+            "orderNum": 5188
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109243021",
+        "name": "连体衣/礼盒",
+        "picture": "https://yanxuan.nosdn.127.net/773677cc0922628152a9b3cbd862426f.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "4005106",
+            "name": "新疆棉，儿童色织条纹短袖连体衣59-90cm",
+            "desc": "100%棉面料，穿着舒适透气",
+            "price": "59.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/2b3748a78c10027dca96504d05acc4bc.png",
+            "orderNum": 1300
+          },
+          {
+            "id": "4007963",
+            "name": "新疆棉宝宝时尚涂鸦短袖连体衣59-90cm",
+            "desc": "创意手绘图案，透气纯棉面料，3色可选",
+            "price": "69.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/a8b170b3114d33dae0ae98cddb5fb3f6.jpg",
+            "orderNum": 2030
+          },
+          {
+            "id": "4023745",
+            "name": "21秋季新品，棉毛布基础款哈衣59-90cm",
+            "desc": "全新印花，不一样的萌趣世界",
+            "price": "52.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/8f75c65cb650579df03b1997913949ff.jpg",
+            "orderNum": 2318
+          },
+          {
+            "id": "4007970",
+            "name": "舒适条纹，纯棉凉爽无袖连体衣59-90cm",
+            "desc": "个性条纹元素，趣味小象图案，3色可选",
+            "price": "79.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/1457b3631892a975c8a8f6dbaabea8e8.jpg",
+            "orderNum": 462
+          },
+          {
+            "id": "4000277",
+            "name": "21春季新品，宝宝舒适四季连体衣0-3岁",
+            "desc": "拥抱新生，A类婴幼儿标准，安全放心",
+            "price": "79.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/6efe85e63ab1e09896e1c99a9fe09d9e.png",
+            "orderNum": 1037
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109243022",
+        "name": "学步鞋",
+        "picture": "https://yanxuan.nosdn.127.net/9a50280bb69e1c12f557f601cce1c480.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "4023738",
+            "name": "舒适软弹，糖果色儿童网孔透气运动鞋25-30",
+            "desc": "防踢鞋头，透气网孔更舒适",
+            "price": "139.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/c437179bc1d0d5ad77a79f15a5c6f166.png",
+            "orderNum": 4171
+          },
+          {
+            "id": "4023641",
+            "name": "防踢鞋头，儿童学步健康机能鞋21-30",
+            "desc": "包头防踢用心呵护",
+            "price": "129.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/33ba674fbb13e2380ee8a74371eacf43.jpg",
+            "orderNum": 2956
+          },
+          {
+            "id": "4027466",
+            "name": "儿童气泵软底学步二阶段学步鞋",
+            "desc": "气泵大底学步鞋",
+            "price": "239.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/19bedfd20a12842b5d7f7b909a62e877.jpg",
+            "orderNum": 2471
+          },
+          {
+            "id": "4007784",
+            "name": "婴幼儿童透气网面学步鞋小童鞋4-6码",
+            "desc": "优质透气网布鞋面，轻盈自在",
+            "price": "119.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/a9f428091f172db89977a511f6639fec.jpg",
+            "orderNum": 535
+          },
+          {
+            "id": "3998535",
+            "name": "学步更自如，婴幼童机能学步鞋4-6码",
+            "desc": "宝宝的第一双鞋，成长不将就",
+            "price": "109.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/ef01de6dfac9cc4c548f317f2feddafe.jpg",
+            "orderNum": 9058
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      }
+    ]
+  }
+}

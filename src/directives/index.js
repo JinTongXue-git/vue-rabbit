@@ -36,7 +36,7 @@ export const imgLazyPlugin = {
            * @param {boolean} entries[0].isIntersecting - 元素是否进入视口
            */
           ([{ isIntersecting }]) => {
-            console.log('图片是否进入视口:', isIntersecting);
+            console.log('图片是否进入视口:', isIntersecting)
             
             // 只要图片进入视口了，就给 img 标签设置 src 属性加载图片
             if (isIntersecting) {

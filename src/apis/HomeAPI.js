@@ -2,6 +2,11 @@
 
 import httpInstance from '@/utils/http'
 
+/**
+ * @description: 获取首页banner
+ * @param {*}
+ * @return {*}
+ */
 export function getHomeBannerApi(params = {}) {
   // 默认为1 ，商品 2
   const {distributionSite = '1'} = params

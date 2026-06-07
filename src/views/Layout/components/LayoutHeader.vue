@@ -1,9 +1,7 @@
 <script setup>
-
 import { useCategoryStore } from '@/stores/category-store.js'
-
-
 </script>
+
 
 <template>
   <header class='app-header'>
@@ -12,23 +10,31 @@ import { useCategoryStore } from '@/stores/category-store.js'
         <RouterLink to="/">小兔鲜</RouterLink>
       </h1>
       <ul class="app-header-nav">
-        <li class="home" >
+        <li class="home">
           <router-link to="/"> 首页</router-link>
         </li>
-        <li class="home" v-for="item in useCategoryStore().categoryList" :key="item.id" >
-          <!-- 一级分类路由链接 -->
-          <router-link :to="`/category/${item.id}`">{{ item.name }}</router-link>
+        <!-- 一级分类路由链接 
+           {
+              "id": "1005000",
+              "name": "居家",
+              "picture": "http.....",
+              "children": [],
+              "goods": []
+        },-->
+        <li class="home" v-for="item in useCategoryStore().categoryList" :key="item.id">
+          <router-link active-class="active" :to="`/category/${item.id}`">{{ item.name }}</router-link>
         </li>
         <!-- <li> <RouterLink to="/">居家</RouterLink> </li>
         <li> <RouterLink to="/">美食</RouterLink> </li>
         <li> <RouterLink to="/">服饰</RouterLink> </li> -->
       </ul>
+      <!-- 搜索框和购物车图标 -->
       <div class="search">
         <i class="iconfont icon-search"></i>
         <input type="text" placeholder="搜一搜">
       </div>
       <!-- 头部购物车 -->
-      
+
     </div>
   </header>
 </template>
@@ -61,24 +67,24 @@ import { useCategoryStore } from '@/stores/category-store.js'
     padding-left: 40px;
     position: relative;
     z-index: 998;
-  
+
     li {
       margin-right: 40px;
       width: 38px;
       text-align: center;
-  
+
       a {
         font-size: 16px;
         line-height: 32px;
         height: 32px;
         display: inline-block;
-  
+
         &:hover {
           color: $xtxColor;
           border-bottom: 1px solid $xtxColor;
         }
       }
-  
+
       .active {
         color: $xtxColor;
         border-bottom: 1px solid $xtxColor;

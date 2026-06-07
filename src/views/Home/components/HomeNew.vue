@@ -1,26 +1,27 @@
 <script setup>
 import HomePanel from '@/views/Home/components/HomePanel.vue'
-import { getNewApi } from '@/apis/HomeAPI.js'
+import { useHomeStore } from '@/stores/home-store.js'
+
+/*
 import { ref, onMounted } from 'vue'
-
 const newList = ref([])
-
 onMounted(() => {
   getNewApi()
   .then((result) => {
-    console.log( 'new:', result);
+    console.log( 'new:', result)
     newList.value = result.result 
   })
   .catch((err) => {
-    console.log(err);
+    console.log(err)
   })
-})
+})*/
+
 </script>
 <template>
   <HomePanel title="新鲜好物" subTitle="新鲜出炉 品质靠谱">
      <template #main>
       <ul class="goods-list">
-        <li v-for="item in newList" :key="item.id">
+        <li v-for="item in useHomeStore().newList" :key="item.id">
           <RouterLink :to="`/detail/${item.id}`">
             <img :src="item.picture" alt="" />
             <p class="name">{{ item.name }}</p>

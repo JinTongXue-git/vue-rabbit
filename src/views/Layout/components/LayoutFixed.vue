@@ -1,5 +1,6 @@
 <script setup>
 import { useCategoryStore } from '@/stores/category-store.js'
+
 import {useScroll} from '@vueuse/core'
 
 const {y} = useScroll(window)

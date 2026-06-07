@@ -1,0 +1,63 @@
+{
+  "code": "1",
+  "msg": "操作成功",
+  "result": {
+    "id": "19999999",
+    "name": "杂项",
+    "picture": null,
+    "children": [
+      {
+        "id": "19999999001",
+        "name": "家庭清洁杂项",
+        "picture": "https://yanxuan.nosdn.127.net/718318c0d3b55d011fcb7c7c843902ce.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "1085007",
+            "name": "一抽即提，免脏手，加厚抽绳垃圾袋3卷60只",
+            "desc": "18μm及10μm两种厚度，袋身不怕漏，3秒抽绳不脏手",
+            "price": "9.50",
+            "picture": "https://yanxuan-item.nosdn.127.net/72af0b7c1d7b0b9710de621788326d2b.png",
+            "orderNum": 33
+          },
+          {
+            "id": "1076004",
+            "name": "软糯治愈系擦手，雪尼尔擦手球",
+            "desc": "吸水快干，不易掉屑",
+            "price": "9.50",
+            "picture": "https://yanxuan-item.nosdn.127.net/43d99e9b97cc55033b0f59b95a91ae49.png",
+            "orderNum": 3154
+          },
+          {
+            "id": "1548001",
+            "name": "添加茂金属更强韧，金属色垃圾袋",
+            "desc": "3卷90只，茂金属添加，柔韧加倍",
+            "price": "8.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/251393c0d8db7b0b594ccf86f1e796d0.png",
+            "orderNum": 5906
+          },
+          {
+            "id": "1525018",
+            "name": "灰尘毛发静电吸附地板除尘干巾40片/包",
+            "desc": "干湿两用，静电除尘",
+            "price": "7.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/cf7584e037706a8df54fecfc6dfdd2af.jpg",
+            "orderNum": 3223
+          },
+          {
+            "id": "1589017",
+            "name": "分场景使用不污染，超细纤维抹布分类5件套",
+            "desc": "精细分工，洁净家居",
+            "price": "14.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/c520bba8209bae877158e8810d889aca.png",
+            "orderNum": 2684
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      }
+    ]
+  }
+}

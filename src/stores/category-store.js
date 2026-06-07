@@ -10,8 +10,9 @@ import { getCategoryApi } from '@/apis/LayoutAPI'
  * 用途：统一管理商品分类数据，实现数据共享和缓存
  * 
  * 使用场景：
- * 1. LayoutHeader.vue - 渲染顶部导航分类列表
- * 2. LayoutFixed.vue - 渲染吸顶导航分类列表
+ * 1. @views/layout/components/LayoutHeader.vue - 渲染顶部导航分类列表
+ * 2. @views/layout/components/LayoutFixed.vue - 渲染吸顶导航分类列表
+ * 3. @views/Home/components/HomeCategory.vue - 渲染分类推荐列表
  * 
  * 工作流程：
  * 1. 调用 getCategory() 方法发起 API 请求
@@ -32,25 +33,43 @@ import { getCategoryApi } from '@/apis/LayoutAPI'
 export const useCategoryStore = defineStore('category-store' , () => {
   const categoryList = ref([])
 
-  function getCategory (){
-    getCategoryApi()
-    .then((result) =>{
+  async function getCategory (){
+
+    // 1. 先尝试读取本地 JSON 文件
+    try {
+      console.log('📦 尝试读取本地分类数据...')
+      const response = await fetch('/data/home-category.json')
+      
+      if (response.ok) {
+        const data = await response.json()
+        categoryList.value = data.result
+        console.log('✅ 成功使用本地数据')
+        return  // 成功了就直接返回，不用请求接口
+      }
+    } catch (error) {
+      console.log('⚠️ 本地数据读取失败:', error)
+    }
+
+    // 2. 本地没有数据，请求接口
+    try {
+      console.log('🔌 请求网络数据...')
+      const result = await getCategoryApi()
       categoryList.value = result.result
-    })
-    .catch((error) =>{
-      console.log('分类接口请求失败，使用静态数据:', error);
-      categoryList.value = [
-        { id: '1', name: '居家'},
-        { id: '2', name: '美食'},
-        { id: '3', name: '服饰'},
-        { id: '4', name: '母婴'},
-        { id: '5', name: '个护'},
-        { id: '6', name: '严选'},
-        { id: '7', name: '数码'},
-        { id: '8', name: '运动'},
-        { id: '9', name: '杂项'}
-      ]
-    })
+      console.log('✅ 成功获取网络数据')
+    } catch (error) {
+      console.error('❌ 网络请求也失败了:', error)
+      // 使用静态 fallback 数据
+      // categoryList.value = [
+      //   { id: '1005000', name: '居家' },
+      //   { id: '1005002', name: '美食' },
+      //   { id: '1010000', name: '服饰' },
+      //   { id: '1011000', name: '母婴' },
+      //   { id: '1013001', name: '个护' },
+      //   { id: '1019000', name: '严选' },
+      //   { id: '1043000', name: '数码' }
+      // ]
+    }
+
   }
 
   return {
