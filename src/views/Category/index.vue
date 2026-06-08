@@ -31,10 +31,10 @@ const { categoryDetail } = useCategory()
       <div class="sub-list">
             <h3>全部分类</h3>
             <ul>
-              <li v-for="i in categoryDetail.children" :key="i.id">
-                <RouterLink to="/">
-                  <img :src="i.picture" />
-                  <p>{{ i.name }}</p>
+              <li v-for="item in categoryDetail.children" :key="item.id">
+                <RouterLink :to="`/category/sub/${item.id}`" >
+                  <img :src="item.picture" />
+                  <p>{{ item.name }}</p>
                 </RouterLink>
               </li>
             </ul>

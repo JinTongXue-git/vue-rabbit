@@ -3,6 +3,8 @@ import Login from '@/views/Login/index.vue'
 import Layout from '@/views/Layout/index.vue'
 import Home from '@/views/Home/index.vue'
 import Category from '@/views/Category/index.vue'
+import SubCategory from '@/views/SubCategory/index.vue'
+
 
 
 // 创建路由实例
@@ -22,6 +24,10 @@ const router = createRouter({
         {
           path: '/category/:id',
           component: Category
+        },
+        {
+          path: '/category/sub/:id',
+          component: SubCategory
         }
       ]
     },
