@@ -26,3 +26,13 @@ export function getCategoryApi01(id){
   })
 }
 
+
+export function getCategoryFilterApi(id){
+  return httpInstance({
+    url: '/category/sub/filter',
+    params: {
+      id: id
+    }
+  })
+}
+
