@@ -7,6 +7,7 @@ const { bannerList } = useBanner()
 const { categoryDetail } = useCategory()
 
 
+
 </script>
 <template>
   <div class="top-category">
