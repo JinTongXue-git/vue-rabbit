@@ -1,22 +1,56 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import { getCategoryFilterApi } from '@/apis/CategoryAPI.js'
+import { getCategoryFilterApi ,getSubCategoryListApi } from '@/apis/CategoryAPI.js'
+
+import GoodsItem from '@/views/Home/components/GoodsItem.vue'
 
 const CategoryData = ref([])
-
-async function getCategoryData(){
+async function getCategoryData() {
   try {
-    const data =  await getCategoryFilterApi(useRoute().params.id)
+    const data = await getCategoryFilterApi(useRoute().params.id)
     CategoryData.value = data.result
   } catch (error) {
-    console.log('获取二级分类数据失败' , error)
+    console.log('获取二级分类数据失败', error)
   }
 }
 
+const RequestBody = ref({
+  categoryId: useRoute().params.id,
+  page: 1,
+  pageSize: 20,
+  sortField: 'publishTime'
+})
+const goodsList = ref([])
+async function getGoodsList() {
+  try {
+    const data = await getSubCategoryListApi(RequestBody.value)
+    console.log('/category/goods/temporary' , data)
+    goodsList.value = data.result.items
+  } catch (error) {
+    console.log('/category/goods/temporary获取商品列表失败', error)
+  }
+}
+
+
+
+
 onMounted(() => {
   getCategoryData()
+  getGoodsList()
 })
+
+function tabChange() {
+  console.log('tabChange()' , RequestBody.value.sortField)
+  RequestBody.value.page = 1
+  getGoodsList()
+}
+
+async function load(){
+  RequestBody.value.page++
+  const data = await getSubCategoryListApi(RequestBody.value)
+  goodsList.value.push(...data.result.items)
+}
 
 </script>
 
@@ -33,13 +67,14 @@ onMounted(() => {
       </el-breadcrumb>
     </div>
     <div class="sub-container">
-      <el-tabs>
+      <el-tabs v-model="RequestBody.sortField" @tab-change="tabChange">
         <el-tab-pane label="最新商品" name="publishTime"></el-tab-pane>
         <el-tab-pane label="最高人气" name="orderNum"></el-tab-pane>
         <el-tab-pane label="评论最多" name="evaluateNum"></el-tab-pane>
       </el-tabs>
-      <div class="body">
-         <!-- 商品列表-->
+      <div class="body" v-infinite-scroll="load">
+        <!-- 商品列表-->
+        <GoodsItem v-for="item in goodsList" :key="item.id" :good="item" />
       </div>
     </div>
   </div>

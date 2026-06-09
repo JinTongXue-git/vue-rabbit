@@ -21,7 +21,7 @@ export default defineConfig({
     Components({
       resolvers: [
         // 配置elementplus采用sass的样式配色
-        ElementPlusResolver({importStyle: "sass"})
+        ElementPlusResolver({importStyle: 'sass'})
 
       ],
     }),
@@ -44,4 +44,18 @@ export default defineConfig({
       },
     },
   },
+  // 重点：添加代理配置
+  server: {
+    proxy: {
+      // 匹配所有以 /api 开头的请求
+      '/api': {
+        // 目标服务器地址
+        target: 'https://pcapi-xiaotuxian-front-devtest.itheima.net',
+        // 必须开启！让服务器以为请求来自它自己
+        changeOrigin: true,
+        // 把 /api 前缀替换成空字符串
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  }
 })
