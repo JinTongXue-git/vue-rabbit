@@ -1,26 +1,41 @@
 <script setup>
 import { ref , onMounted} from 'vue'
 import { useRoute } from 'vue-router'
+import { getDetailApi } from '@/apis/DetailAPI.js'
 
-const route = useRoute()
-const id = ref('')
+const goods = ref({})
+async function getGoods(){
+  const res = await getDetailApi(useRoute().params.id)
+  goods.value = res.result
+  console.log(res)
+}
+
 
 onMounted(() => {
-  
+  getGoods()
 })
 </script>
 
 <template>
   <div class="xtx-goods-page">
-    <div class="container">
+    <!-- ✅ 判断 goods 是否为 null -->
+    <div class="container" v-if="goods.id">
       <div class="bread-container">
         <el-breadcrumb separator=">">
+          <!-- 常见错误 goods.categories[1].id 页面加载时为空  因为
+            亲求的内容还未返回，但是已经渲染了，导致空指针异常
+            解决方法：
+            1. 可选链操作  goods.categories[1]?.id
+            2. v-if 判断数据是否存在
+          -->
           <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/' }">母婴
+          <el-breadcrumb-item :to="{ path: `/category/${goods.categories?.[1].id}`  }">
+            {{  goods.categories?.[1].name}}
           </el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/' }">跑步鞋
+          <el-breadcrumb-item :to="{ path: `/category/sub/${goods.categories?.[0].id}`  }">
+            {{  goods.categories?.[0].name}}   
           </el-breadcrumb-item>
-          <el-breadcrumb-item>抓绒保暖，毛毛虫子儿童运动鞋</el-breadcrumb-item>
+          <el-breadcrumb-item>{{ goods?.name || '无商品名称' }}</el-breadcrumb-item>
         </el-breadcrumb>
       </div>
       <!-- 商品信息 -->
@@ -32,35 +47,42 @@ onMounted(() => {
 
               <!-- 统计数量 -->
               <ul class="goods-sales">
-                <li>
+                <!-- <li>
                   <p>销量人气</p>
                   <p> 100+ </p>
+                  <p><i class="iconfont icon-task-filling"></i>销量人气</p>
+                </li> -->
+                <li>
+                  <p>销量人气</p>
+                  <p> {{ goods.salesCount }} </p>
                   <p><i class="iconfont icon-task-filling"></i>销量人气</p>
                 </li>
                 <li>
                   <p>商品评价</p>
-                  <p>200+</p>
+                  <p> {{ goods.commentCount }} </p>
                   <p><i class="iconfont icon-comment-filling"></i>查看评价</p>
                 </li>
                 <li>
                   <p>收藏人气</p>
-                  <p>300+</p>
+                  <p> {{ goods.collectCount }} </p>
                   <p><i class="iconfont icon-favorite-filling"></i>收藏商品</p>
                 </li>
                 <li>
                   <p>品牌信息</p>
-                  <p>400+</p>
+                  <p> {{ goods.brand?.name || '无品牌' }} </p>
                   <p><i class="iconfont icon-dynamic-filling"></i>品牌主页</p>
                 </li>
               </ul>
             </div>
             <div class="spec">
               <!-- 商品信息区 -->
-              <p class="g-name"> 抓绒保暖，毛毛虫儿童鞋 </p>
-              <p class="g-desc">好穿 </p>
+              <!-- <p class="g-name"> 抓绒保暖，毛毛虫儿童鞋 </p> -->
+              <p class="g-name"> {{ goods?.name || '无商品名称' }} </p>
+              <!-- <p class="g-desc">好穿 </p> -->
+              <p class="g-desc"> {{ goods?.desc || '无商品描述' }} </p>
               <p class="g-price">
-                <span>200</span>
-                <span> 100</span>
+                <span>{{ goods.price }}</span>
+                <span> {{ goods.oldPrice }}</span>
               </p>
               <div class="g-service">
                 <dl>
@@ -100,13 +122,13 @@ onMounted(() => {
                 <div class="goods-detail">
                   <!-- 属性 -->
                   <ul class="attrs">
-                    <li v-for="item in 3" :key="item.value">
-                      <span class="dt">白色</span>
-                      <span class="dd">纯棉</span>
+                    <li v-for="item in goods.details.properties" :key="item.value">
+                      <span class="dt">{{ item.name }}</span>
+                      <span class="dd">{{ item.value }}</span>
                     </li>
                   </ul>
                   <!-- 图片 -->
-
+                  <img v-for="img in goods.details.pictures" :key="img" :src="img" alt="">
                 </div>
               </div>
             </div>
@@ -361,3 +383,70 @@ onMounted(() => {
   padding: 25px 0;
 }
 </style>
+
+<!--  /*
+{
+    "code": "1",
+    "msg": "操作成功",
+    "result": {
+        "id": "1369155859933827074",
+        "name": "钻石陶瓷涂层多用锅18cm 小奶锅",
+        "spuCode": "goods-spu-001",
+        "desc": "安全耐用，易于清洗",
+        "price": "128.00",
+        "oldPrice": "128.00",
+        "discount": 1,
+        "inventory": 0,
+        "brand": null,
+        "salesCount": 0,
+        "commentCount": 0,
+        "collectCount": 1,
+        "mainVideos": [],
+        "videoScale": null,
+        "mainPictures": [
+            "http://yjy-xiaotuxian-dev.oss-cn-beijing.aliyuncs.com/picture/2021-04-05/6fdcac19-dd44-442c-9212-f7ec3cf3ed18.jpg",
+            "http://yjy-xiaotuxian-dev.oss-cn-beijing.aliyuncs.com/picture/2021-04-05/45fd1372-05d2-4ff8-8669-79463a1e589f.jpg",
+            "http://yjy-xiaotuxian-dev.oss-cn-beijing.aliyuncs.com/picture/2021-04-05/e5a9f569-accc-4006-9064-2180e7f2b691.jpg",
+            "http://yjy-xiaotuxian-dev.oss-cn-beijing.aliyuncs.com/picture/2021-04-05/81119a14-5311-4011-af4a-273894375c74.jpg",
+            "http://yjy-xiaotuxian-dev.oss-cn-beijing.aliyuncs.com/picture/2021-04-05/dafec715-761b-438b-afc8-1e3f55bf3c1c.png"
+        ],
+        "specs": [
+            {
+                "name": "颜色",
+                "id": "1369139574067957762",
+                "values": [
+                    {
+                        "name": "黑色",
+                        "picture": "http://yjy-xiaotuxian-dev.oss-cn-beijing.aliyuncs.com/picture/2021-04-05/cd6c46b6-b944-4479-b547-cdee294568a1.png",
+                        "desc": ""
+                    },
+                    {
+                        "name": "蓝色",
+                        "picture": "http://yjy-xiaotuxian-dev.oss-cn-beijing.aliyuncs.com/picture/2021-04-05/2d5ba800-1868-48c8-9213-1a5f8965a05b.png",
+                        "desc": ""
+                    }
+                ]
+            },
+            {
+                "name": "尺寸",
+                "id": "1369141324204216321",
+                "values": [
+                    {
+                        "name": "30cm",
+                        "picture": null,
+                        "desc": ""
+                    },
+                    {
+                        "name": "20cm",
+                        "picture": null,
+                        "desc": ""
+                    },
+                    {
+                        "name": "10cm",
+                        "picture": null,
+                        "desc": ""
+                    }
+                ]
+            },
+-->
+   
