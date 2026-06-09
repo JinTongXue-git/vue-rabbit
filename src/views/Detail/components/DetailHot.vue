@@ -1,14 +1,20 @@
 <script setup>
 import { fetchHotGoodsApi } from '@/apis/DetailAPI.js'
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { useRoute } from 'vue-router'
 
 const props = defineProps({
-  title : {
-    type : String,
-    default : 'XX榜单'
+  type : {
+    type : Number,
+    default : 1
   }
 })
+
+const TYPEMAP = { 1 : '24小时榜单', 2 : '周日榜单' }
+const title = computed(() => {
+   return TYPEMAP[props.type] || 'XX榜单'
+})
+
 
 
 // 掉用接口获取周日榜单数据
@@ -16,8 +22,7 @@ const detailHotList = ref([])
 async function getDetailHotList(){
   const res = await fetchHotGoodsApi({
     id : useRoute().params.id,
-    type : 2,
-    limit : 3
+    type : props.type,
   })
   console.log('detailHotList组件生效了' , res)
   detailHotList.value = res.result
@@ -29,7 +34,8 @@ onMounted(() => {
 </script>
 <template>
   <div class="goods-hot">
-    <h3>周日榜单</h3>
+    <!-- <h3>周日榜单</h3> -->
+    <h3>{{title}}</h3>
     <!-- 商品区块 -->
     <RouterLink to="/" class="goods-item" v-for="item in detailHotList" :key="item.id">
       <img :src="item.picture" alt="" />
