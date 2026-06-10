@@ -9,7 +9,7 @@ const props = defineProps({
     default : 1
   }
 })
-
+//根据传入的type获取榜单标题
 const TYPEMAP = { 1 : '24小时榜单', 2 : '周日榜单' }
 const title = computed(() => {
    return TYPEMAP[props.type] || 'XX榜单'
