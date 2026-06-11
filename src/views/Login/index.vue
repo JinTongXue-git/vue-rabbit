@@ -9,8 +9,8 @@ const router = useRouter()
 //2.表单数据模型
 const from = ref({
   account: '',
-  password: ''
-
+  password: '',
+  agree: true
 })
 //3.校验规则
 const rules = {
@@ -20,6 +20,15 @@ const rules = {
   password: [
     { required: true, message: '请输入密码', trigger: 'blur' },
     { min: 6, max: 14, message: '密码长度必须在6到14个字符之间', trigger: 'blur' }
+  ],
+  agree: [
+    {
+      // 自定义校验规则，同意是true ，反之是false
+      validator: (rule, value, callback)=> {
+        console.log(value)
+        return value===true ? callback() : callback(new Error('请同意隐私条款和服务条款'))
+      }
+    }
   ]
 }
 
@@ -62,8 +71,8 @@ const rules = {
               <el-form-item prop="password" label="密码">
                 <el-input v-model="from.password" />
               </el-form-item>
-              <el-form-item label-width="22px">
-                <el-checkbox  size="large">
+              <el-form-item prop="agree" label-width="22px">
+                <el-checkbox v-model="from.agree" size="large">
                   我已同意隐私条款和服务条款
                 </el-checkbox>
               </el-form-item>
