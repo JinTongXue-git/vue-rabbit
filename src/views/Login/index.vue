@@ -1,4 +1,31 @@
 <script setup>
+import { ref , onMounted } from 'vue'
+
+import { useRouter } from 'vue-router'
+
+//1.校验（账号和密码）
+const router = useRouter()
+
+//2.表单数据模型
+const from = ref({
+  account: '',
+  password: ''
+
+})
+//3.校验规则
+const rules = {
+  account: [
+    { required: true, message: '请输入账号', trigger: 'blur' },
+  ],
+  password: [
+    { required: true, message: '请输入密码', trigger: 'blur' },
+    { min: 6, max: 14, message: '密码长度必须在6到14个字符之间', trigger: 'blur' }
+  ]
+}
+
+
+
+
 
 </script>
 
@@ -24,13 +51,16 @@
         </nav>
         <div class="account-box">
           <div class="form">
-            <el-form label-position="right" label-width="60px"
-              status-icon>
-              <el-form-item  label="账户">
-                <el-input/>
+            <!-- 1.绑定表单数据模型  2. 绑定校验规则“集合“ -->
+            <el-form :model="from" :rules="rules" 
+            label-position="right" label-width="60px" status-icon>
+              <!-- 3. 绑定校验规则 -->
+              <el-form-item prop="account" label="账户">
+                <!-- 4. 绑定“具体“校验规则 -->
+                <el-input v-model="from.account" />
               </el-form-item>
-              <el-form-item label="密码">
-                <el-input/>
+              <el-form-item prop="password" label="密码">
+                <el-input v-model="from.password" />
               </el-form-item>
               <el-form-item label-width="22px">
                 <el-checkbox  size="large">
