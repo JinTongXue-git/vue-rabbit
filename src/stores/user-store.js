@@ -17,10 +17,16 @@ export const useUserStore = defineStore('user', () => {
       ElMessage.error(error.message)
     }
   }
+  // 4.定义清除用户数据的action函数
+  function clearUserInfo (){
+    userInfo.value = {}
+  }
+
   //3.以对象的格式把state和actionreturn
   return {
     userInfo,
-    getUserInfo
+    getUserInfo,
+    clearUserInfo
   }
 },
 {
