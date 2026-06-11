@@ -2,16 +2,19 @@
 //1.用户名和密码只需要通过简单的配置（看文档的方式－复杂功能通过多个不同组件拆解）
 //2.同意协议 自定义规则validator:(rule，value，callback)=>{}
 //3.统一校验 通过调用form实例的方法validate->true
-import { ref , onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { loginApi } from '@/apis/LoginAPI'
+import { ElMessage } from 'element-plus'
+import 'element-plus/theme-chalk/el-message.css'
 
 //1.校验（账号和密码）
 const router = useRouter()
 
 //2.表单数据模型
 const from = ref({
-  account: '',
-  password: '',
+  account: '12056258282',
+  password: 'hm#qd@23!',
   agree: true
 })
 //3.校验规则
@@ -26,9 +29,9 @@ const rules = {
   agree: [
     {
       // 自定义校验规则，同意是true ，反之是false
-      validator: (rule, value, callback)=> {
+      validator: (rule, value, callback) => {
         console.log(value)
-        return value===true ? callback() : callback(new Error('请同意隐私条款和服务条款'))
+        return value === true ? callback() : callback(new Error('请同意隐私条款和服务条款'))
       }
     }
   ]
@@ -37,14 +40,25 @@ const rules = {
 // 4.获取form实例，用于统一校验
 const formRef = ref(null)
 
-// 5.登录方法(所有相都通过校验，valid为true时才登录)
-const doLogin = async () => {
-   await formRef.value.validate((valid) => {
-    if(valid){
-      router.push('/')
+/* 5.登录方法(所有相都通过校验，valid为true时才登录)
+  5.1登录成功后，跳转到首页
+  5.2登录失败后，提示用户登录失败(用响应拦截器，统一处理401错误)
+*/
+const doLogin = () => {
+  const { account, password } = from.value
+
+  formRef.value.validate(async (valid) => {
+    if (valid) {
+      const res = await loginApi({ account, password })
+      console.log(res)  //delete
+      ElMessage({
+        message: '登录成功',
+        type: 'success'
+      })
+      router.replace({path:'/'})
     }
-   })
-  
+  })
+
 }
 
 
@@ -74,8 +88,7 @@ const doLogin = async () => {
         <div class="account-box">
           <div class="form">
             <!-- 1.绑定表单数据模型  2. 绑定校验规则“集合“ -->
-            <el-form ref="formRef" :model="from" :rules="rules" 
-            label-position="right" label-width="60px" status-icon>
+            <el-form ref="formRef" :model="from" :rules="rules" label-position="right" label-width="60px" status-icon>
               <!-- 3. 绑定校验规则 -->
               <el-form-item prop="account" label="账户">
                 <!-- 4. 绑定“具体“校验规则 -->
