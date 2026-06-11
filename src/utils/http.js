@@ -4,6 +4,8 @@ import axios from 'axios'
 import { ElMessage } from 'element-plus'
 import 'element-plus/theme-chalk/el-message.css'
 import { useUserStore } from '@/stores/user-store'
+import { useRouter } from 'vue-router'
+
 
 const httpInstance = axios.create({
   baseURL: '/api',
@@ -34,14 +36,21 @@ httpInstance.interceptors.response.use(
     return response.data
   } , 
   error => {
+    // 1. 打印错误信息
+    console.log('error', error)
     ElMessage({
       type:'warning',
       message: error.response.data.message || '登录失败，请重新登录'
     })
+    //401错误处理 5.2登录失败后，提示用户登录失败(用响应拦截器，统一处理401错误)
+    // 1. 清除localStorage中的用户数据
+    if(error.response.status === 401){
+      useUserStore().clearUserInfo()
+      // 2. 跳转登录页
+      useRouter().replace('/login')
+    }
     return Promise.reject(error)
   }
 )
-
-
 
 export default httpInstance
