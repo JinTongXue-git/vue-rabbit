@@ -35,7 +35,8 @@ const target = ref(null)
 const {elementX , elementY , isOutside} = useMouseInElement(target)
 const left = ref(0)
 const top = ref(0)
-
+const positionX = ref(0)
+const positionY = ref(0)
 // })
 // watch(() => [elementX.value, elementY.value], () => {
 //   if (isOutside.value === false) {
@@ -64,9 +65,13 @@ watch(() => [elementX.value, elementY.value], () => {
     left.value = Math.max(0, Math.min(200, elementX.value - 100))
     top.value = Math.max(0, Math.min(200, elementY.value - 100))
   }
+  // 计算背景图的移动距离
+  positionX.value = -left.value * 2
+  positionY.value = -top.value * 2
+
+
+
 })
-
-
 </script>
 
 
@@ -77,7 +82,7 @@ watch(() => [elementX.value, elementY.value], () => {
     <div class="middle" ref="target">
       <img :src="imageList[activeIndex]" alt="" />
       <!-- 蒙层小滑块 -->
-      <div class="layer" :style="{ left: `${left}px`, top: `${top}px` }"></div> 
+      <div class="layer"  :style="{ left: `${left}px`, top: `${top}px` }" v-show="isOutside === false"></div> 
     </div>
     <!-- 小图列表 -->
     <ul class="small">
@@ -90,11 +95,11 @@ watch(() => [elementX.value, elementY.value], () => {
     <!-- 放大镜大图 -->
     <div class="large" :style="[
       {
-        backgroundImage: `url(${imageList[0]})`,
-        backgroundPositionX: `0px`,
-        backgroundPositionY: `0px`,
+        backgroundImage: `url(${imageList[activeIndex]})`,
+        backgroundPositionX: `${positionX}px`,
+        backgroundPositionY: `${positionY}px`,
       },
-    ]" v-show="false"></div>
+    ]" v-show="isOutside === false"></div>
   </div>
 </template>
 
