@@ -2,11 +2,11 @@
 //1.用户名和密码只需要通过简单的配置（看文档的方式－复杂功能通过多个不同组件拆解）
 //2.同意协议 自定义规则validator:(rule，value，callback)=>{}
 //3.统一校验 通过调用form实例的方法validate->true
-import { ref, onMounted } from 'vue'
+import { ref} from 'vue'
 import { useRouter } from 'vue-router'
-import { loginApi } from '@/apis/LoginAPI'
 import { ElMessage } from 'element-plus'
 import 'element-plus/theme-chalk/el-message.css'
+import { useUserStore } from '@/stores/user-store'
 
 //1.校验（账号和密码）
 const router = useRouter()
@@ -49,8 +49,7 @@ const doLogin = () => {
 
   formRef.value.validate(async (valid) => {
     if (valid) {
-      const res = await loginApi({ account, password })
-      console.log(res)  //delete
+      await useUserStore().getUserInfo({ account, password })
       ElMessage({
         message: '登录成功',
         type: 'success'
