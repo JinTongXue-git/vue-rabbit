@@ -1,6 +1,8 @@
 <script setup>
+//1.用户名和密码只需要通过简单的配置（看文档的方式－复杂功能通过多个不同组件拆解）
+//2.同意协议 自定义规则validator:(rule，value，callback)=>{}
+//3.统一校验 通过调用form实例的方法validate->true
 import { ref , onMounted } from 'vue'
-
 import { useRouter } from 'vue-router'
 
 //1.校验（账号和密码）
@@ -32,7 +34,18 @@ const rules = {
   ]
 }
 
+// 4.获取form实例，用于统一校验
+const formRef = ref(null)
 
+// 5.登录方法(所有相都通过校验，valid为true时才登录)
+const doLogin = async () => {
+   await formRef.value.validate((valid) => {
+    if(valid){
+      router.push('/')
+    }
+   })
+  
+}
 
 
 
@@ -61,7 +74,7 @@ const rules = {
         <div class="account-box">
           <div class="form">
             <!-- 1.绑定表单数据模型  2. 绑定校验规则“集合“ -->
-            <el-form :model="from" :rules="rules" 
+            <el-form ref="formRef" :model="from" :rules="rules" 
             label-position="right" label-width="60px" status-icon>
               <!-- 3. 绑定校验规则 -->
               <el-form-item prop="account" label="账户">
@@ -76,7 +89,7 @@ const rules = {
                   我已同意隐私条款和服务条款
                 </el-checkbox>
               </el-form-item>
-              <el-button size="large" class="subBtn">点击登录</el-button>
+              <el-button size="large" class="subBtn" @click="doLogin">点击登录</el-button>
             </el-form>
           </div>
         </div>
