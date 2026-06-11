@@ -22,4 +22,9 @@ export const useUserStore = defineStore('user', () => {
     userInfo,
     getUserInfo
   }
-})
+},
+{
+  // p开启数据持久化
+  persist: true
+}
+)
