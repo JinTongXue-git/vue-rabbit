@@ -6,7 +6,7 @@ import { useCartStore } from '@/stores/cart-store.js'
 <template>
   <div class="cart">
     <a class="curr" href="javascript:;">
-      <i class="iconfont icon-cart"></i><em>{{ useCartStore().getCount() }}</em>
+      <i class="iconfont icon-cart"></i><em>{{ useCartStore().getCount }}</em>
     </a>
     <div class="layer">
       <div class="list">
@@ -31,8 +31,8 @@ import { useCartStore } from '@/stores/cart-store.js'
       </div>
       <div class="foot">
         <div class="total">
-          <p>共 10 件商品</p>
-          <p>&yen; 100.00 </p>
+          <p>共 {{ useCartStore().getCount }} 件商品</p>
+          <p>&yen; {{ useCartStore().getTotalPrice.toFixed(2) }} </p>
         </div>
         <el-button size="large" type="primary" >去购物车结算</el-button>
       </div>

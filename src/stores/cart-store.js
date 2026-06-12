@@ -1,7 +1,7 @@
 // 封装购物车模块状态管理
 
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 // 定义购物车模块的状态管理
 export const useCartStore = defineStore('cart', () => {
@@ -23,9 +23,9 @@ export const useCartStore = defineStore('cart', () => {
     // 1. 先判断是否有相同的商品（根据 skuId 判断）
     const item = cartList.value.find(item => item.skuId === goods.skuId)
     // 2. 如果有相同的商品，就增加数量
-    if(item){
+    if (item) {
       item.count++
-    }else{
+    } else {
       // 3. 如果没有相同的商品，就添加到购物车
       cartList.value.push(goods)
     }
@@ -34,10 +34,10 @@ export const useCartStore = defineStore('cart', () => {
 
   // 从购物车删除商品
   // @param {String} skuId - 要删除的商品的 SKU ID
-  function delCart(skuId){
+  function delCart(skuId) {
     // 1. 根据 skuId 查找商品在数组中的索引
     const index = cartList.value.findIndex(item => skuId === item.skuId)
-    if(index !== -1){
+    if (index !== -1) {
       // 2. 如果找到了（index 不为 -1），从数组中移除该商品
       cartList.value.splice(index, 1)
     }
@@ -47,23 +47,25 @@ export const useCartStore = defineStore('cart', () => {
   // 计算购物车商品总数量
   // 使用数组的 reduce 方法，遍历 cartList 中每个商品对象的 count 字段并累加
   // @returns {Number} - 返回购物车中所有商品的数量总和
-  function getCount(){
-    // reduce: 数组的归约方法
-    // pre: 累积值（初始值为 0）
-    // cur: 当前元素（购物车中的每个商品对象）
-    // cur.count: 当前商品的数量
-    // 最终返回所有商品 count 的总和
-    return cartList.value.reduce((pre, cur) => pre + cur.count, 0)
-  }
+  // reduce: 数组的归约方法
+  // pre: 累积值（初始值为 0）
+  // cur: 当前元素（购物车中的每个商品对象）
+  // cur.count: 当前商品的数量
+  // 最终返回所有商品 count 的总和
+  const getCount 
+    = computed(() =>  cartList.value.reduce((pre, cur) => pre + cur.count, 0))
 
+  const getTotalPrice 
+    = computed(() =>  cartList.value.reduce((pre, cur) => pre + cur.price * cur.count, 0))
 
   return {
     cartList,
     addCart,
     delCart,
-    getCount
+    getCount,
+    getTotalPrice
   }
-},{persist: true})
+}, { persist: true })
 
 
 
