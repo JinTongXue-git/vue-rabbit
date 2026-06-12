@@ -5,6 +5,10 @@ import DetailHot from '@/views/Detail/components/DetailHot.vue'
 import { ref , onMounted} from 'vue'
 import { useRoute } from 'vue-router'
 import { getDetailApi } from '@/apis/DetailAPI.js'
+import { useCartStore } from '@/stores/cart-store.js'
+import { ElMessage } from 'element-plus'
+import 'element-plus/theme-chalk/el-message.css'
+
 
 const goods = ref({})
 async function getGoods(){
@@ -17,9 +21,48 @@ onMounted(() => {
   getGoods()
 })
 
+// 存储用户选择的 SKU 规格信息
+// 由 XtxSku 组件的 change 事件触发更新
+let skuObj = {}
+
+// SKU 规格变化回调
+// @param {Object} sku - 用户选择的规格信息，包含 skuId, specsText, price 等
 function skuChange(sku){
   console.log('skuChange()' , sku)
+  skuObj = sku
+  console.log('skuObj 数据' , skuObj)
 }
+
+// 商品数量
+const count = ref(1)
+
+// 数量变化回调（由 el-input-number 组件触发）
+// 注意：由于使用了 v-model 双向绑定，count 值会自动更新，无需手动赋值
+function countChange(count){
+  console.log('countChange()' , count)
+}
+
+// 加入购物车
+// 逻辑：必须先选择商品规格（skuId），否则提示用户选择
+function addCart(){
+  if(skuObj.skuId){
+    // 已选择规格，添加到购物车
+    useCartStore().addCart({
+      id: goods.value.id,           // 商品ID
+      name: goods.value.name,       // 商品名称
+      picture: goods.value.mainPictures[0],  // 商品主图
+      price: goods.value.price,     // 商品价格
+      count: count.value,           // 购买数量
+      skuId: skuObj.skuId,          // SKU ID
+      attrsText: skuObj.specsText,  // 规格属性文本
+      selected: true                // 默认选中
+    })
+  }else{
+    // 未选择规格，提示用户
+    ElMessage.error('请选择商品规格')
+  }
+}
+
 </script>
 
 <template>
@@ -108,10 +151,10 @@ function skuChange(sku){
               <!-- sku组件 -->
               <XtxSku :goods="goods" @change="skuChange" />
               <!-- 数据组件 -->
-
+              <el-input-number v-model="count" @change="countChange" />
               <!-- 按钮组件 -->
               <div>
-                <el-button size="large" class="btn">
+                <el-button @click="addCart" size="large" class="btn">
                   加入购物车
                 </el-button>
               </div>
