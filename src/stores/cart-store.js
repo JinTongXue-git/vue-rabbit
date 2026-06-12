@@ -30,15 +30,17 @@ export const useCartStore = defineStore('cart', () => {
       cartList.value.push(goods)
     }
   }
+
+
+
+
+
+
   return {
-    cartList,
-    addCart
+    cartList,addCart
+    
   }
-},
-{
-  persist: true
-}
-)
+},{persist: true})
 
 
 
