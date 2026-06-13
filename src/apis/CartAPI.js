@@ -32,3 +32,13 @@ export function delCartApi(skuIds){
     }
   })
 }
+
+//合并本地购物车到服务器购物车
+// @param {Array} cartList - 本地购物车列表
+export function mergeCartApi(cartList){
+  return httpInstance({
+    url: '/member/cart/merge',
+    method: 'POST',
+    data: cartList
+  })
+}
