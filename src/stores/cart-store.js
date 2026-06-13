@@ -3,7 +3,7 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import { useUserStore } from '@/stores/user-store.js'
-import { insertCartApi, findNewCartListApi } from '@/apis/CartAPI.js'
+import { insertCartApi, findNewCartListApi ,delCartApi } from '@/apis/CartAPI.js'
 
 
 
@@ -18,6 +18,11 @@ export const useCartStore = defineStore('cart', () => {
   // 获取登录状态
   const isLogin = computed(() => userStore.userInfo.token )
 
+  async function updataNewList (){
+    // 1. 刷新购物车列表
+    const res = await findNewCartListApi()
+    cartList.value = res.result
+  }
 
   // 购物车列表
   // 数据结构: { id, name, picture, price, count, skuId, attrsText, selected }
@@ -39,9 +44,7 @@ export const useCartStore = defineStore('cart', () => {
       //登录状态，加入购物车接口
       await insertCartApi({skuId: goods.skuId, count: goods.count})
       // 1. 刷新购物车列表
-      const res = await findNewCartListApi()
-      cartList.value = res.result
-      return
+      updataNewList()
     }else{
       // 1. 先判断是否有相同的商品（根据 skuId 判断）
       const item = cartList.value.find(item => item.skuId === goods.skuId)
@@ -58,10 +61,11 @@ export const useCartStore = defineStore('cart', () => {
 
   // 从购物车删除商品
   // @param {String} skuId - 要删除的商品的 SKU ID
-  function delCart(skuId) {
+  async function delCart(skuId) {
     if(isLogin.value){
-      console.log('登录状态，删除购物车商品接口')
-      
+      await delCartApi([skuId])
+      // 1. 刷新购物车列表
+      updataNewList()
     }else{
       // 1. 根据 skuId 查找商品在数组中的索引
       const index = cartList.value.findIndex(item => skuId === item.skuId)
@@ -134,10 +138,12 @@ export const useCartStore = defineStore('cart', () => {
 
   // 全选/取消全选方法
   // @param {Boolean} checked - 是否全选
-  function toggleAll(checked) {
+  async function toggleAll(checked) {
     cartList.value.forEach(item => {
       item.selected = checked
     })
+    // 1. 刷新购物车列表
+    updataNewList()
   }
 
   

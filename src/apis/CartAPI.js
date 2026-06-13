@@ -20,3 +20,15 @@ export function findNewCartListApi(){
     method: 'GET'
   })
 }
+
+
+/// 删除购物车商品接口  根据 Array[skuId] 删除
+export function delCartApi(skuIds){
+  return httpInstance({
+    url: '/member/cart',
+    method: 'DELETE',
+    data: {
+      ids: skuIds
+    }
+  })
+}

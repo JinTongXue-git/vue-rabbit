@@ -44,6 +44,7 @@ export default defineConfig({
       },
     },
   },
+
   // 重点：添加代理配置
   server: {
     proxy: {
@@ -58,4 +59,5 @@ export default defineConfig({
       }
     }
   }
+  
 })
