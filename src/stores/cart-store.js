@@ -16,8 +16,8 @@ export const useCartStore = defineStore('cart', () => {
   // - attrsText: 规格属性文本（如"颜色: 黑色 尺寸: M"）
   // - selected: 是否选中
   const cartList = ref([])
-  const allSelected = ref(true)
 
+  
   // 添加商品到购物车
   // @param {Object} goods - 商品对象，包含 id, name, picture, price, count, skuId, attrsText, selected
   function addCart(goods) {
@@ -74,9 +74,41 @@ export const useCartStore = defineStore('cart', () => {
         pre +=  cur.count
       }
       return pre
-    }, 0))
+  }, 0))
  
 
+
+  // ========== 全选逻辑说明 ==========
+  // 全选功能分为两套独立逻辑，互不冲突：
+  // 
+  // 【逻辑一：全选框控制单选框】
+  // 当用户点击全选框时，根据全选框的状态（true/false），
+  // 批量设置所有商品的选中状态。
+  // 
+  // 【逻辑二：单选框影响全选框】
+  // 当用户点击单个商品的单选框时，全选框的状态由所有单选框决定：
+  //   - 所有单选框都选中 → 全选框为 true
+  //   - 任意一个单选框未选中 → 全选框为 false
+  // 
+  // 实现方式：
+  // - allSelected：计算属性，自动判断是否所有商品都被选中
+  // - toggleAll：方法，批量设置所有商品的选中状态
+  // ===================================
+
+  // 全选状态（计算属性）
+  // 判断逻辑：购物车非空 且 所有商品都被选中时返回 true，否则返回 false
+  const allSelected = computed(() => {
+    if (cartList.value.length === 0) return false
+    return cartList.value.every(item => item.selected)
+  })
+
+  // 全选/取消全选方法
+  // @param {Boolean} checked - 是否全选
+  function toggleAll(checked) {
+    cartList.value.forEach(item => {
+      item.selected = checked
+    })
+  }
 
   
   return {
@@ -85,7 +117,9 @@ export const useCartStore = defineStore('cart', () => {
     delCart,
     getCount,
     getTotalPrice,
-    getSelectedCount
+    getSelectedCount,
+    allSelected,
+    toggleAll
   }
 }, { persist: true })
 

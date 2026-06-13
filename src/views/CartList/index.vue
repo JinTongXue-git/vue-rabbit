@@ -2,10 +2,14 @@
 <script setup>
 import { useCartStore } from '@/stores/cart-store.js'
 
-const cartList = useCartStore().cartList
+// 获取购物车状态管理实例
+const cartStore = useCartStore()
 
-
-
+// 处理全选框点击事件
+// @param {Boolean} checked - 全选框的新状态
+const handleToggleAll = (checked) => {
+  cartStore.toggleAll(checked)
+}
 </script>
 
 <template>
@@ -16,7 +20,11 @@ const cartList = useCartStore().cartList
           <thead>
             <tr>
               <th width="120">
-                <el-checkbox />
+                <!-- 全选框：绑定 allSelected 状态，点击时触发全选逻辑 -->
+                <el-checkbox 
+                  :model-value="cartStore.allSelected" 
+                  @change="handleToggleAll" 
+                />
               </th>
               <th width="400">商品信息</th>
               <th width="220">单价</th>
@@ -27,33 +35,34 @@ const cartList = useCartStore().cartList
           </thead>
           <!-- 商品列表 -->
           <tbody>
-            <tr v-for="i in cartList" :key="i.id">
+            <tr v-for="item in cartStore.cartList" :key="item.id">
               <td>
-                <el-checkbox  v-model="i.selected" />
+                <!-- 单选框：绑定当前商品的选中状态 -->
+                <el-checkbox v-model="item.selected" />
               </td>
               <td>
                 <div class="goods">
-                  <RouterLink to="/"><img :src="i.picture" alt="" /></RouterLink>
+                  <RouterLink to="/"><img :src="item.picture" alt="" /></RouterLink>
                   <div>
                     <p class="name ellipsis">
-                      {{ i.name }}
+                      {{ item.name }}
                     </p>
                   </div>
                 </div>
               </td>
               <td class="tc">
-                <p>&yen;{{ i.price }}</p>
+                <p>&yen;{{ item.price }}</p>
               </td>
               <td class="tc">
-                <el-input-number v-model="i.count" />
+                <el-input-number v-model="item.count" />
               </td>
               <td class="tc">
-                <p class="f16 red">&yen;{{ (i.price * i.count).toFixed(2) }}</p>
+                <p class="f16 red">&yen;{{ (item.price * item.count).toFixed(2) }}</p>
               </td>
               <td class="tc">
                 <p>
                   <el-popconfirm title="确认删除吗?" confirm-button-text="确认" cancel-button-text="取消" 
-                    @confirm="useCartStore().delCart(i.skuId)">
+                    @confirm="cartStore.delCart(item.skuId)">
                     <template #reference>
                       <a href="javascript:;">删除</a>
                     </template>
@@ -61,7 +70,7 @@ const cartList = useCartStore().cartList
                 </p>
               </td>
             </tr>
-            <tr v-if="cartList.length === 0">
+            <tr v-if="cartStore.cartList.length === 0">
               <td colspan="6">
                 <div class="cart-none">
                   <el-empty description="购物车列表为空">
