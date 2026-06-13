@@ -7,10 +7,6 @@ import { insertCartApi, findNewCartListApi ,delCartApi } from '@/apis/CartAPI.js
 
 
 
-
-
-
-
 // 定义购物车模块的状态管理
 export const useCartStore = defineStore('cart', () => {
 
@@ -77,6 +73,12 @@ export const useCartStore = defineStore('cart', () => {
 
     
   }
+
+  function clearCart(){
+    cartList.value = []
+  }
+
+
 
 
   // 计算购物车商品总数量
@@ -155,7 +157,8 @@ export const useCartStore = defineStore('cart', () => {
     getTotalPrice,
     getSelectedCount,
     allSelected,
-    toggleAll
+    toggleAll,
+    clearCart
   }
 }, { persist: true })
 

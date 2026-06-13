@@ -3,6 +3,8 @@ import { ref } from 'vue'
 import { loginApi } from '@/apis/LoginAPI'
 import { ElMessage } from 'element-plus'
 import 'element-plus/theme-chalk/el-message.css'
+import { useCartStore } from '@/stores/cart-store'
+
 
 export const useUserStore = defineStore('user', () => {
   // 1.定义管理用户数据的state
@@ -20,6 +22,8 @@ export const useUserStore = defineStore('user', () => {
   // 4.定义清除用户数据的action函数
   function clearUserInfo (){
     userInfo.value = {}
+    // 1. 清空购物车
+    useCartStore().clearCart()
   }
 
   //3.以对象的格式把state和actionreturn
