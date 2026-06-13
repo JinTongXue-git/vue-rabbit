@@ -66,7 +66,7 @@ async function createOrder(){
     })),
     addressId: curAddress.value.id
   })
-  
+  // 生成订单ID
   const orderId = res?.result?.id
   console.log('订单ID', orderId)
   console.log('创建订单', res)

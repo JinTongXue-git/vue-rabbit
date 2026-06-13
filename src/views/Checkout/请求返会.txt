@@ -1,0 +1,79 @@
+
+index.vue:18 结算信息 {code: '1', msg: '操作成功', result: {…}}
+index.vue:25 默认地址 Proxy(Object) {id: '2013131287384035330', receiver: '剑侠客', contact: '12345678911', provinceCode: '450000', cityCode: '450100', …}
+index.vue:71 订单ID 2065781144137240578
+index.vue:72 创建订单 {code: '1', msg: '操作成功', result: {…}}code: "1"msg: "操作成功"result: {id: '2065781144137240578', createTime: '2026-06-13 20:59:39', payType: 1, orderState: 1, payLatestTime: '2026-06-13 21:29:39', …}[[Prototype]]: Object
+index.vue:15 获取订单详情成功 {code: '1', msg: '操作成功', result: {…}}
+
+1.创建订单:
+{
+    "code": "1",
+    "msg": "操作成功",
+    "result": {
+        "id": "2065781144137240578",
+        "createTime": "2026-06-13 20:59:39",
+        "payType": 1,
+        "orderState": 1,
+        "payLatestTime": "2026-06-13 21:29:39",
+        "postFee": 5,
+        "payMoney": 64.6,
+        "totalMoney": 59.6,
+        "totalNum": 2,
+        "skus": null,
+        "payChannel": 1,
+        "countdown": null
+    }
+}
+
+
+2. 获取订单详情成功:
+{
+    "code": "1",
+    "msg": "操作成功",
+    "result": {
+        "id": "2065781144137240578",
+        "createTime": "2026-06-13 20:59:40",
+        "payType": 1,
+        "orderState": 1,
+        "payLatestTime": "2026-06-13 21:29:40",
+        "countdown": 1799,
+        "postFee": 5,
+        "payMoney": 64.6,
+        "payChannel": 1,
+        "payState": 1,
+        "totalMoney": 59.6,
+        "totalNum": 2,
+        "deliveryTimeType": 1,
+        "receiverContact": "剑侠客",
+        "receiverMobile": "12345678911",
+        "provinceCode": "450000",
+        "cityCode": "450100",
+        "countyCode": "450103",
+        "receiverAddress": "广西壮族自治区 南宁市 青秀区大唐官府B栋11单元21303房",
+        "payTime": null,
+        "consignTime": null,
+        "endTime": null,
+        "closeTime": null,
+        "evaluationTime": null,
+        "skus": [
+            {
+                "id": "2065781144141434883",
+                "spuId": "4023839",
+                "name": "日本冰块冰球制冰模具",
+                "quantity": 2,
+                "image": "https://yanxuan-item.nosdn.127.net/2be38fc160992fe41f7d4a45bd0f90e5.png",
+                "realPay": 59.6,
+                "curPrice": 29.8,
+                "totalMoney": null,
+                "properties": [
+                    {
+                        "propertyMainName": "规格",
+                        "propertyValueName": "十二格方形2只装"
+                    }
+                ],
+                "attrsText": "规格:十二格方形2只装 "
+            }
+        ],
+        "arrivalEstimatedTime": null
+    }
+}
