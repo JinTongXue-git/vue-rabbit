@@ -2,9 +2,23 @@
 
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
+import { useUserStore } from '@/stores/user-store.js'
+import { insertCartApi, findNewCartListApi } from '@/apis/CartAPI.js'
+
+
+
+
+
+
 
 // 定义购物车模块的状态管理
 export const useCartStore = defineStore('cart', () => {
+
+  const userStore = useUserStore()
+  // 获取登录状态
+  const isLogin = computed(() => userStore.userInfo.token )
+
+
   // 购物车列表
   // 数据结构: { id, name, picture, price, count, skuId, attrsText, selected }
   // - id: 商品ID
@@ -20,15 +34,24 @@ export const useCartStore = defineStore('cart', () => {
   
   // 添加商品到购物车
   // @param {Object} goods - 商品对象，包含 id, name, picture, price, count, skuId, attrsText, selected
-  function addCart(goods) {
-    // 1. 先判断是否有相同的商品（根据 skuId 判断）
-    const item = cartList.value.find(item => item.skuId === goods.skuId)
-    // 2. 如果有相同的商品，就增加数量
-    if (item) {
-      item.count++
-    } else {
-      // 3. 如果没有相同的商品，就添加到购物车
-      cartList.value.push(goods)
+  async function addCart(goods) {
+    if (isLogin.value) {
+      //登录状态，加入购物车接口
+      await insertCartApi({skuId: goods.skuId, count: goods.count})
+      // 1. 刷新购物车列表
+      const res = await findNewCartListApi()
+      cartList.value = res.result
+      return
+    }else{
+      // 1. 先判断是否有相同的商品（根据 skuId 判断）
+      const item = cartList.value.find(item => item.skuId === goods.skuId)
+      // 2. 如果有相同的商品，就增加数量
+      if (item) {
+        item.count++
+      } else {
+        // 3. 如果没有相同的商品，就添加到购物车
+        cartList.value.push(goods)
+      }
     }
   }
 
@@ -36,12 +59,19 @@ export const useCartStore = defineStore('cart', () => {
   // 从购物车删除商品
   // @param {String} skuId - 要删除的商品的 SKU ID
   function delCart(skuId) {
-    // 1. 根据 skuId 查找商品在数组中的索引
-    const index = cartList.value.findIndex(item => skuId === item.skuId)
-    if (index !== -1) {
-      // 2. 如果找到了（index 不为 -1），从数组中移除该商品
-      cartList.value.splice(index, 1)
+    if(isLogin.value){
+      console.log('登录状态，删除购物车商品接口')
+      
+    }else{
+      // 1. 根据 skuId 查找商品在数组中的索引
+      const index = cartList.value.findIndex(item => skuId === item.skuId)
+      if (index !== -1) {
+        // 2. 如果找到了（index 不为 -1），从数组中移除该商品
+        cartList.value.splice(index, 1)
+      }
     }
+
+    
   }
 
 
