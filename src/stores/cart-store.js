@@ -16,6 +16,7 @@ export const useCartStore = defineStore('cart', () => {
   // - attrsText: 规格属性文本（如"颜色: 黑色 尺寸: M"）
   // - selected: 是否选中
   const cartList = ref([])
+  const allSelected = ref(true)
 
   // 添加商品到购物车
   // @param {Object} goods - 商品对象，包含 id, name, picture, price, count, skuId, attrsText, selected
@@ -56,14 +57,35 @@ export const useCartStore = defineStore('cart', () => {
     = computed(() =>  cartList.value.reduce((pre, cur) => pre + cur.count, 0))
 
   const getTotalPrice 
-    = computed(() =>  cartList.value.reduce((pre, cur) => pre + cur.price * cur.count, 0))
+    = computed(() =>  cartList.value.reduce((pre, cur) => {
+      // 1. 累加选中的商品的总价
+      if (cur.selected) {
+        pre += cur.price * cur.count
+      }
+      return pre
+    }, 0))
 
+
+
+  // 计算购物车中选中的商品数量
+  const getSelectedCount = computed(() =>  cartList.value.reduce((pre, cur) => {
+      // 1. 累加选中的商品的数量
+      if (cur.selected) {
+        pre +=  cur.count
+      }
+      return pre
+    }, 0))
+ 
+
+
+  
   return {
     cartList,
     addCart,
     delCart,
     getCount,
-    getTotalPrice
+    getTotalPrice,
+    getSelectedCount
   }
 }, { persist: true })
 

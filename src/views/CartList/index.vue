@@ -1,6 +1,11 @@
 
 <script setup>
-const cartList = []
+import { useCartStore } from '@/stores/cart-store.js'
+
+const cartList = useCartStore().cartList
+
+
+
 </script>
 
 <template>
@@ -11,7 +16,7 @@ const cartList = []
           <thead>
             <tr>
               <th width="120">
-                <el-checkbox/>
+                <el-checkbox />
               </th>
               <th width="400">商品信息</th>
               <th width="220">单价</th>
@@ -24,7 +29,7 @@ const cartList = []
           <tbody>
             <tr v-for="i in cartList" :key="i.id">
               <td>
-                <el-checkbox />
+                <el-checkbox  v-model="i.selected" />
               </td>
               <td>
                 <div class="goods">
@@ -47,7 +52,8 @@ const cartList = []
               </td>
               <td class="tc">
                 <p>
-                  <el-popconfirm title="确认删除吗?" confirm-button-text="确认" cancel-button-text="取消" @confirm="delCart(i)">
+                  <el-popconfirm title="确认删除吗?" confirm-button-text="确认" cancel-button-text="取消" 
+                    @confirm="useCartStore().delCart(i.skuId)">
                     <template #reference>
                       <a href="javascript:;">删除</a>
                     </template>
@@ -59,7 +65,7 @@ const cartList = []
               <td colspan="6">
                 <div class="cart-none">
                   <el-empty description="购物车列表为空">
-                    <el-button type="primary">随便逛逛</el-button>
+                    <el-button type="primary" @click="$router.push('/')" >随便逛逛</el-button>
                   </el-empty>
                 </div>
               </td>
@@ -71,8 +77,8 @@ const cartList = []
       <!-- 操作栏 -->
       <div class="action">
         <div class="batch">
-          共 10 件商品，已选择 2 件，商品合计：
-          <span class="red">¥ 200.00 </span>
+          共 {{ useCartStore().getCount }} 件商品，已选择 {{ useCartStore().getSelectedCount }} 件，商品合计：
+          <span class="red">¥ {{ useCartStore().getTotalPrice.toFixed(2) }} </span>
         </div>
         <div class="total">
           <el-button size="large" type="primary" >下单结算</el-button>
