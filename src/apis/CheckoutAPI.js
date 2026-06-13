@@ -10,3 +10,22 @@ export function getCheckoutInfoApi(){
     method: 'GET'
   })
 }
+
+
+
+/**
+ * 创建订单
+ */
+export function createOrderApi(data){
+  return httpInstance({
+    url: '/member/order',
+    method: 'POST',
+    data
+  })
+}
+
+
+
+
+
+

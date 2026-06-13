@@ -1,40 +1,84 @@
 <script setup>
-import { getCheckoutInfoApi } from '@/apis/CheckoutAPI.js'
+import { getCheckoutInfoApi , createOrderApi} from '@/apis/CheckoutAPI.js'
 import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+import { useCartStore } from '@/stores/cart-store.js'
 
-// 结算信息 首页获取新鲜好物第一个商品， 有问题， 2-3个商品
-const checkInfo = ref({})  // 订单对象
-const curAddress = ref({})  // 地址对象
+// ✅ 关键修复：在 setup() 同步代码中提前获取 router 和 store 实例
+const router = useRouter()
+const cartStore = useCartStore()
+
+// 结算信息
+const checkInfo = ref({})
+const curAddress = ref({})
+
 async function getCheckInfo() {
   const res = await getCheckoutInfoApi()
   checkInfo.value = res.result
   console.log('结算信息', res)
 
-  let item = checkInfo.value.userAddresses.find(item => item.isDefault === 0)
-  curAddress.value = item
+  // ✅ 添加空值检查
+  if (checkInfo.value.userAddresses && checkInfo.value.userAddresses.length > 0) {
+    let item = checkInfo.value.userAddresses.find(item => item.isDefault === 0)
+    curAddress.value = item || checkInfo.value.userAddresses[0]
+  }
   console.log('默认地址', curAddress.value)
-
 }
 
 onMounted(() => {
   getCheckInfo()
 })
 
-
-const showDialog = ref(false)  // 切换地址弹窗
-
-// 切换地址
+const showDialog = ref(false)
 const activeAddress = ref({})
+
 function switchAddress(item) {
   activeAddress.value = item
 }
-// 确认切换地址
+
 function confirm (){
   curAddress.value = activeAddress.value
   showDialog.value = false
   activeAddress.value = {}
 }
 
+// 创建订单
+async function createOrder(){
+  // ✅ 添加参数校验
+  if (!curAddress.value?.id) {
+    alert('请选择收货地址')
+    return
+  }
+  
+  if (!checkInfo.value?.goods?.length) {
+    alert('购物车为空')
+    return
+  }
+
+  const res = await createOrderApi({
+    deliveryTimeType: 1,
+    payType: 1,
+    payChannel: 1,
+    buyerMessage: '',
+    goods: checkInfo.value.goods.map(item => ({
+      skuId: item.skuId,
+      count: item.count,
+    })),
+    addressId: curAddress.value.id
+  })
+  
+  const orderId = res?.result?.id
+  console.log('订单ID', orderId)
+  console.log('创建订单', res)
+  // ✅ 使用提前获取的 router 实例
+  router.push({
+    path: '/pay',
+    query: { id: orderId }
+  })
+
+  // ✅ 使用提前获取的 cartStore 实例（保持原方法名 updataNewList）
+  cartStore.updataNewList()
+}
 </script>
 
 <template>
@@ -129,7 +173,7 @@ function confirm (){
         </div>
         <!-- 提交订单 -->
         <div class="submit">
-          <el-button type="primary" size="large">提交订单</el-button>
+          <el-button @click="createOrder"  type="primary" size="large" >提交订单</el-button>
         </div>
       </div>
     </div>
