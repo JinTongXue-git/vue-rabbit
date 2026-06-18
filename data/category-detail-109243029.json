@@ -1,0 +1,291 @@
+{
+  "code": "1",
+  "msg": "操作成功",
+  "result": {
+    "id": "109243029",
+    "name": "运动",
+    "picture": null,
+    "children": [
+      {
+        "id": "109312000",
+        "name": "健身大器械",
+        "picture": "https://yanxuan.nosdn.127.net/6a1d37ffb2e28622a71e3c4415eaee35.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "4019874",
+            "name": "麦瑞克家用轻音智能多功能彩屏跑步机S450",
+            "desc": "多功能跑步机，畅享彩屏",
+            "price": "2089.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/a5d745bbe067ca2468cdb2948f4f10ca.jpg",
+            "orderNum": 3546
+          },
+          {
+            "id": "4018204",
+            "name": "麦瑞克家用轻音椭圆机（送上门包安装）",
+            "desc": "送上门包安装。高性价比，一机多用，全家可用",
+            "price": "1495.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/5e1d7dab26415cd0d44dfb9645e01348.jpg",
+            "orderNum": 2253
+          },
+          {
+            "id": "4023100",
+            "name": "办公家用Mini健身磁控车",
+            "desc": "原创设计，小巧精致，安装便捷，收纳方便",
+            "price": "581.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/8250d307ea586c1a1d1430023d6f0ce6.jpg",
+            "orderNum": 2096
+          },
+          {
+            "id": "4018446",
+            "name": "麦瑞克智能磁控轻音椭圆机",
+            "desc": "创新主体免安装，锻炼全身，纤腰细臀（HUAWEIHiLink生态）",
+            "price": "1899.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/c570b87e7f5f2ab77567e0f537eaee37.jpg",
+            "orderNum": 5563
+          },
+          {
+            "id": "4014017",
+            "name": "野小兽磁阻划船机健身器材家用室内运动训练",
+            "desc": "野小兽智能磁阻划船机，磁控静音，旋钮调阻，0.1m²占地，在线私教",
+            "price": "1499.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/43aa62df27f8f3f4fb6ba042ad21d830.png",
+            "orderNum": 518
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109312001",
+        "name": "健身小器械",
+        "picture": "https://yanxuan.nosdn.127.net/8c9f060e6fddb2b75af851a9a2c60087.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "3995478",
+            "name": "门上单杠墙体免打孔引体向上器",
+            "desc": "长度可调，墙体免打孔",
+            "price": "104.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/02b31c535488c3d41e074e4bbb7e8c46.jpg",
+            "orderNum": 442
+          },
+          {
+            "id": "3995082",
+            "name": "朱炳仁铜·鼠标手救星，养生按摩保健铜球",
+            "desc": "东方智慧,抑菌材质,缓解鼠标手和颈椎不适,健体养生",
+            "price": "465.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/ac9670ade4c03ea79a654191ee2de8a2.png",
+            "orderNum": 464
+          },
+          {
+            "id": "3994144",
+            "name": "智能自动回弹健腹滚轮",
+            "desc": "智能回弹，卷腹神器，滚出好身材",
+            "price": "249.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/746948bc036104aeaae51e3c11e43729.png",
+            "orderNum": 460
+          },
+          {
+            "id": "3990777",
+            "name": "轻搏击主义-时尚拳击系列Pro",
+            "desc": "全新升级，一站式购齐，健身娱乐解压家庭必备",
+            "price": "171.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/0f9a49918541de52bb644ede2cd27051.png",
+            "orderNum": 452
+          },
+          {
+            "id": "3987045",
+            "name": "塑型弹力训练组合",
+            "desc": "弹力圈+弹力绳+弹力带，帮助你练出蜜桃臀",
+            "price": "42.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/5f2cbd1273e063d5321543d26e91fc26.png",
+            "orderNum": 24
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109312002",
+        "name": "城市出行",
+        "picture": "https://yanxuan.nosdn.127.net/b41b50710c3823f44a9f5b549a67ca81.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "4023114",
+            "name": "KJE金属色系轻量电动车骑行盔男女通用",
+            "desc": "3C认证，进口材料，安全出行",
+            "price": "120.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/8f3a3b7dc6ca874f934b15af31417f61.png",
+            "orderNum": 14844
+          },
+          {
+            "id": "4011468",
+            "name": "F.Mate差旅防窥声光警报手电",
+            "desc": "本产品为三合一手电，500流明高亮照明，能预警远方潜在危险；附带的红外扫描仪功能，可用于识破隐藏摄像头；另外，高分贝蜂鸣+强光爆闪报警，紧急情况可一键发出警报，也可作为门禁警报，高效求救。",
+            "price": "179.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/be9b359eab85d41e7d7e355fd62be983.jpg",
+            "orderNum": 9403
+          },
+          {
+            "id": "4007007",
+            "name": "轻量电动车骑行盔",
+            "desc": "采用奥地利进口EPS缓冲层，仅重560g，骑行过程中减少对肩颈的压力",
+            "price": "129.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/dcebe1130f0ddce3edfd0a9d3dc7bd90.png",
+            "orderNum": 893
+          },
+          {
+            "id": "4023115",
+            "name": "双镜四季骑行半盔Pro（摩托车可用）",
+            "desc": "3C认证，双镜片设计，进口材质耐撞抗摔",
+            "price": "198.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/7498e93c9744cce5dad8b556befe8c10.png",
+            "orderNum": 1960
+          },
+          {
+            "id": "4013432",
+            "name": "KJE金属色系轻量电动车骑行盔男女通用",
+            "desc": "1、通过国家3C安全标准，安全有保证。\n2、奥地利进口EPS，高密泡沫，有效缓冲外力，保护头部安全。\n3、PC一体成型外壳，减轻重量的同时，使得外壳更加牢固，提高头盔使用寿命。\n4、多彩金属亮面色系，让这款头盔更加年轻化，受众更广，接受度高。\n5、高清镜片技术，能轻松挡下骑行过程中的异物。\n6、精心设计的导风槽，可以使风从前后风孔流过带走热量，让人时刻保持清爽。",
+            "price": "129.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/09723c372699a2c5a92b2204d58bd61e.png",
+            "orderNum": 474
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109312003",
+        "name": "运动护具",
+        "picture": "https://yanxuan.nosdn.127.net/ef9bcb99d88b3a1cfd9d2e120c158c21.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "3994931",
+            "name": "草本精华蒸汽热敷护颈带5片/盒",
+            "desc": "明星同款，给你的脖子做个SPA",
+            "price": "49.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/78a5e9ddfc577197899ac746b102bb2d.png",
+            "orderNum": 458
+          },
+          {
+            "id": "3995143",
+            "name": "透气运动训练护腕",
+            "desc": "缠绕贴合，稳固手腕",
+            "price": "39.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/2f1bdd73178dbe6b16b899c1bf23e3f4.png",
+            "orderNum": 487
+          },
+          {
+            "id": "3521201",
+            "name": "弹力支撑型护腰带",
+            "desc": "弹力支撑，专业护腰",
+            "price": "80.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/e27676054de26f67acdff8a5efefbd25.jpg",
+            "orderNum": 382
+          },
+          {
+            "id": "1687060",
+            "name": "关节膝盖酸痛石墨烯热敷护膝",
+            "desc": "高科技恒温发热，舒缓疼痛",
+            "price": "169.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/e7a371380531c5e35c739e48d686fb73.png",
+            "orderNum": 3259
+          },
+          {
+            "id": "3520212",
+            "name": "运动无缝针织高弹护肘",
+            "desc": "分散压力，保护肘关节",
+            "price": "33.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/80a7ef01d83729e91a353211674ff20b.jpg",
+            "orderNum": 317
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109313000",
+        "name": "垂钓",
+        "picture": "https://yanxuan.nosdn.127.net/c4eeeae307d0562cf3e95303146282b2.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "4026116",
+            "name": "探险者黑胶防晒防雨遮阳伞户外钓鱼伞",
+            "desc": "防雨遮阳隔绝紫外线",
+            "price": "169.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/66090c5de391e43e4516601e14870842.jpg",
+            "orderNum": 16456
+          },
+          {
+            "id": "4008940",
+            "name": "佳钓尼伏魔典藏进口碳素钓鱼竿",
+            "desc": "伏魔典藏手杆，超轻超硬进口碳素鲤鱼鲫鱼杆",
+            "price": "305.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/3ea24817c9eb1fd692f2385ad6b7fb71.png",
+            "orderNum": 960
+          },
+          {
+            "id": "4011360",
+            "name": "【明星单品】霸道轻量版大物竿钓竿鱼竿",
+            "desc": "三种调性一款轻硬无短板的综合竿",
+            "price": "251.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/7693195de927cc9fef8c468e33968cf5.jpg",
+            "orderNum": 9022
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109313003",
+        "name": "户外装备",
+        "picture": "https://yanxuan.nosdn.127.net/6bbd92c68741c857d842f0afd1c7bdd5.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "3994572",
+            "name": "伊海诗冬日出行多功能防风保暖围脖",
+            "desc": "时尚针织印花面料，多种穿戴方式，正反两穿，亲肤保暖",
+            "price": "35.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/25effebb31ea6fc58b92f5a6aecda8b9.png",
+            "orderNum": 26806
+          },
+          {
+            "id": "3993694",
+            "name": "可触屏户外出行手套-合集",
+            "desc": "户外轻松骑行",
+            "price": "89.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/264df9f0faddb60e88a8b108058d25e6.png",
+            "orderNum": 506
+          },
+          {
+            "id": "3550194",
+            "name": "防晒快干长檐棒球帽",
+            "desc": "遮阳防晒,保暖新潮",
+            "price": "69.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/7d0b373a6a63882783202c836bae264d.png",
+            "orderNum": 2333
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      }
+    ]
+  }
+}

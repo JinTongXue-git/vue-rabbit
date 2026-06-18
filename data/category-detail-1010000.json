@@ -1,0 +1,323 @@
+{
+  "code": "1",
+  "msg": "操作成功",
+  "result": {
+    "id": "1010000",
+    "name": "服饰",
+    "picture": null,
+    "children": [
+      {
+        "id": "109303000",
+        "name": "钱包/胸包",
+        "picture": "https://yanxuan.nosdn.127.net/237613bc9c22eb422dade63e3ed7c61a.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "4019044",
+            "name": "自我态度男式多功能多层格局休闲胸包",
+            "desc": "休闲潮流男士斜挎包",
+            "price": "146.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/ac33cf37023facd976dd46dc637c45a8.jpg",
+            "orderNum": 3391
+          },
+          {
+            "id": "4013563",
+            "name": "轻松出行复古经典老花时尚女式钥匙包",
+            "desc": "简约潮流女士钥匙包",
+            "price": "88.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/cedfb4827ca489e574abeb5d19ce21e5.jpg",
+            "orderNum": 29
+          },
+          {
+            "id": "4013716",
+            "name": "别致优雅男式新潮头层牛皮钥匙包",
+            "desc": "可旋转五金挂钩，悬挂方便",
+            "price": "106.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/72f50e8d10cf3c6a040c2f800774b007.jpg",
+            "orderNum": 6943
+          },
+          {
+            "id": "4019910",
+            "name": "一包在手想走就走男士风琴多卡位便携卡包",
+            "desc": "男士多卡位真皮卡包",
+            "price": "121.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/9af3d86efd10625817084dbecaf3d76c.jpg",
+            "orderNum": 683
+          },
+          {
+            "id": "4020262",
+            "name": "休闲潮流运动男士胸包",
+            "desc": "轻便休闲运动斜挎胸包",
+            "price": "136.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/fa3d10a78d37bbd3956ef5f8c855d1dc.jpg",
+            "orderNum": 2643
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109311005",
+        "name": "女式靴子",
+        "picture": "https://yanxuan.nosdn.127.net/62c5dacf3e0cbe8e4188ccd263358d1a.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "1667068",
+            "name": "新潮运动底，女式保暖皮毛一体雪地靴",
+            "desc": "澳洲羊皮毛一体，保暖舒适",
+            "price": "319.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/93efb5e64a554e98d2d11c0a322b08f6.png",
+            "orderNum": 4208
+          },
+          {
+            "id": "1666023",
+            "name": "女式高弹金丝针织面金属跟短靴",
+            "desc": "金丝闪耀，如踏万千星辉",
+            "price": "259.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/b516518c0f7f1b608a04a8b8cbc9ef9d.png",
+            "orderNum": 921
+          },
+          {
+            "id": "1651001",
+            "name": "女式圆头搭带牛皮踝靴",
+            "desc": "进口牛皮，舒适透气",
+            "price": "309.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/b7e41588d04c97bb3788e0fa2d402240.png",
+            "orderNum": 642
+          },
+          {
+            "id": "1652031",
+            "name": "女式头层牛皮经典切尔西靴",
+            "desc": "经典挚爱，百搭的不老款",
+            "price": "275.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/a339fda444ac036855b75dcc4e66e37a.png",
+            "orderNum": 14
+          },
+          {
+            "id": "3818015",
+            "name": "女式经典优雅尖头切尔西靴",
+            "desc": "尖头切尔西，穿上精致与优雅",
+            "price": "269.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/e12d74857b6618dc4567398f32a71b0d.png",
+            "orderNum": 3262
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109311006",
+        "name": "女式休闲鞋",
+        "picture": "https://yanxuan.nosdn.127.net/8cd3a76ffffb14e9fe92ad2369117af0.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "3991784",
+            "name": "复古经典女式休闲鞋小白鞋",
+            "desc": "超高性价比的真皮小白鞋",
+            "price": "172.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/ebf52f79b473b7839bcef1568975a179.png",
+            "orderNum": 900
+          },
+          {
+            "id": "3986614",
+            "name": "女式优雅蝴蝶结饰带浅口穆勒鞋",
+            "desc": "浪漫演绎，法式复古方头",
+            "price": "178.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/36cf7f601519a1c0f545d9e2a6123154.png",
+            "orderNum": 991
+          },
+          {
+            "id": "3827017",
+            "name": "鸣夏女式运动休闲凉鞋",
+            "desc": "凉鞋也有运动鞋的舒适度",
+            "price": "145.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/da7629edd21bebe5cd26adbbbf5817ac.png",
+            "orderNum": 14
+          },
+          {
+            "id": "1666066",
+            "name": "女式羊毛内里懒人家居豆豆鞋",
+            "desc": "温暖羊毛内里，秋冬不臃肿",
+            "price": "199.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/d099046fb6145ae8bbf31e4ad0141973.png",
+            "orderNum": 505
+          },
+          {
+            "id": "3986520",
+            "name": "女式交叉绑带罗马角斗士凉鞋",
+            "desc": "夏日随性搭，时髦感飙升",
+            "price": "155.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/28dedcc7805456a1f8f79b7baf8c46aa.png",
+            "orderNum": 8944
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109311007",
+        "name": "女式运动鞋",
+        "picture": "https://yanxuan.nosdn.127.net/7be561f2ddc2179a7e116c413636eba9.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "4000582",
+            "name": "靓丽色彩，超软一脚蹬运动休闲女鞋",
+            "desc": "运动出游两不误，舒适百搭的一双好鞋",
+            "price": "220.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/4a64a5a54d588eaf5be48647b0ac83bd.png",
+            "orderNum": 564
+          },
+          {
+            "id": "3996616",
+            "name": "保暖系列-女式饼干板鞋加毛款",
+            "desc": "简约纹理时尚“潮&#34;”你而来",
+            "price": "174.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/01f0260802ef8bba164e7c8e1ba8ae20.jpg",
+            "orderNum": 563
+          },
+          {
+            "id": "3995078",
+            "name": "厚底增高休闲运动老爹鞋",
+            "desc": "率性潮流马蹄底，悦享舒适",
+            "price": "286.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/9810d3acbd11e9dd77952eb97032b519.png",
+            "orderNum": 9070
+          },
+          {
+            "id": "3997933",
+            "name": "复古阿甘女式休闲运动鞋",
+            "desc": "复古设计，时尚百搭，可穿四季",
+            "price": "258.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/839aea5622be52830fadd8ccdede4fec.png",
+            "orderNum": 456
+          },
+          {
+            "id": "3459033",
+            "name": "软弹/保暖两款可选，女式舒软轻弹健步鞋",
+            "desc": "清爽透气，享受每一步的轻盈；保暖加绒，享受温暖的秋冬！",
+            "price": "159.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/1f95d579952f425d840dc051dafb6156.jpg",
+            "orderNum": 1185
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109315000",
+        "name": "11.11购物狂欢",
+        "picture": "https://yanxuan.nosdn.127.net/b29297263032957553d7153b309db74b.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "4001285",
+            "name": "英伦长柄自动晴雨伞",
+            "desc": "雨天有情调，英伦风设计，给你好品味",
+            "price": "40.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/e77b8f4a8ddd1e777394d84347859f7c.png",
+            "orderNum": 694
+          },
+          {
+            "id": "4000620",
+            "name": "「一件三穿好过冬」男中长款鹅绒防水外套",
+            "desc": "一件衣服三种穿法，应对多变天气",
+            "price": "659.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/aa9e03278e3274a2a83f3f8e7df5ee6f.png",
+            "orderNum": 1950
+          },
+          {
+            "id": "4000102",
+            "name": "男式零感无压加厚保暖羽绒服",
+            "desc": "为「轻暖」而生",
+            "price": "409.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/0ff69c2099d98aa3cdddcb0edb9108a0.png",
+            "orderNum": 644
+          },
+          {
+            "id": "4000283",
+            "name": "轻商旅小黑盒耐磨防刮纯PC拉杆箱（20/24）",
+            "desc": "商旅两用，格调出行",
+            "price": "399.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/12a750021e9cc50b8b314dffa8755d75.png",
+            "orderNum": 540
+          },
+          {
+            "id": "4000422",
+            "name": "新国潮风严选原创蒸汽热敷眼罩（10片/盒）",
+            "desc": "国潮图案，当潮不让，为中国制造赋能",
+            "price": "31.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/f53da16cdc8180e43e483e867ef5e4db.png",
+            "orderNum": 465
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109318003",
+        "name": "【年末狂欢季】",
+        "picture": "https://yanxuan.nosdn.127.net/8f8092d5bf6a133a8cb59ab7b9f790e9.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "1555000",
+            "name": "舒眠真丝眼罩",
+            "desc": "顺滑真丝，感受舒适睡眠",
+            "price": "79.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/85432452d5f40c4798c08f1f0beb4a43.png",
+            "orderNum": 3324
+          },
+          {
+            "id": "1621018",
+            "name": "懒人瘦出好身材，多功能甩脂塑形机",
+            "desc": "懒人福音居家轻松塑身",
+            "price": "589.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/540f84174dbf9b98d4072abbd886819e.png",
+            "orderNum": 2257
+          },
+          {
+            "id": "1593000",
+            "name": "软糯似baby肌肤，男式高领纯小山羊绒衫",
+            "desc": "绒毛取自未满1岁的山羊羊羔",
+            "price": "559.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/06156761337ba0fd1f8f51470f698b5f.png",
+            "orderNum": 698
+          },
+          {
+            "id": "1281002",
+            "name": "轻灵碳素耐用型羽毛球拍单双拍",
+            "desc": "超轻球拍，运动随心",
+            "price": "119.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/89cc3ab3e332bb1df5dc20241b5ca4bb.png",
+            "orderNum": 1835
+          },
+          {
+            "id": "1436033",
+            "name": "柔软透气，女式精梳棉内裤6条装",
+            "desc": "爱慕供应商柔软透气",
+            "price": "125.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/dc30e9603306e59d959e7fac6968244e.jpg",
+            "orderNum": 1081
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      }
+    ]
+  }
+}

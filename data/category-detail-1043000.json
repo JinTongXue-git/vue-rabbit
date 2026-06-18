@@ -1,0 +1,307 @@
+{
+  "code": "1",
+  "msg": "操作成功",
+  "result": {
+    "id": "1043000",
+    "name": "数码",
+    "picture": null,
+    "children": [
+      {
+        "id": "1008006",
+        "name": "影音娱乐",
+        "picture": "https://yanxuan.nosdn.127.net/f5797ca77cfe413e7753ec69f9bd4bb1.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "3990582",
+            "name": "airline真无线耳机，空气感佩戴，全新升级",
+            "desc": "音乐工匠打造，高保真音质",
+            "price": "189.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/48c839eed5b1559636b15cc9b86aa06c.jpg",
+            "orderNum": 763
+          },
+          {
+            "id": "3989748",
+            "name": "善谋者得天下，三国杀桌游",
+            "desc": "宅家娱乐神器，竞技社交合一",
+            "price": "158.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/b4960b7e7d9dd98c83ec1ec350f4f39c.png",
+            "orderNum": 795
+          },
+          {
+            "id": "3806013",
+            "name": "平台云音乐氧气立体声蓝牙头戴式触控耳机",
+            "desc": "智能红心键，一键交互云音乐app；高通蓝牙5.0强信号，aptX无损音质体验；26小时长续航；Hi-res专业高解析认证；极简滑触设计，柔软亲肤蛋白皮耳罩，佩戴舒适",
+            "price": "459.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/d8764ae4cca84f15628d4d13797fad6e.png",
+            "orderNum": 684
+          },
+          {
+            "id": "3990740",
+            "name": "发现隐藏角落的摄像头，多功能红外探测仪",
+            "desc": "红外探测声光报警小巧便携",
+            "price": "99.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/f04029bd97987a8fe796b2b3b41ef4dd.png",
+            "orderNum": 9175
+          },
+          {
+            "id": "3842020",
+            "name": "平台云音乐真无线蓝牙耳机Lite版",
+            "desc": "蓝牙5.0低功耗20小时续航；三频均衡，干净音质；IPX5防水设计，纳米涂层；陶瓷天线，信号更强大",
+            "price": "179.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/e3b8bf89ef7ba71c24c853927ec89ee8.png",
+            "orderNum": 661
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "1022000",
+        "name": "3C数码",
+        "picture": "https://yanxuan.nosdn.127.net/99b8f97b2e5449606fd558574aa15982.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "3486000",
+            "name": "平台有道口袋打印机GT1",
+            "desc": "便携打印，配热敏纸一卷",
+            "price": "179.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/5132df203926107422afc38bafe497fc.png",
+            "orderNum": 9835
+          },
+          {
+            "id": "3487028",
+            "name": "罗永浩推荐款！平台智造轻薄无线充电器",
+            "desc": "苹果7.5W快充三星快充",
+            "price": "59.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/3f72b00417feb825694276224ff1d632.png",
+            "orderNum": 4188
+          },
+          {
+            "id": "3464062",
+            "name": "办公居家必备，3A3U智能插线板",
+            "desc": "高颜值插线板，办公居家必备",
+            "price": "59.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/b9e65109ee77e9a78f57ce3fef97c793.png",
+            "orderNum": 30
+          },
+          {
+            "id": "1569014",
+            "name": "出差旅行必备神器，多国通用转换插头",
+            "desc": "新增PD45W电脑快充款，电脑、手机、ipad快充1个搞定。",
+            "price": "115.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/804d2ff16a809bc5055b90663456651a.jpg",
+            "orderNum": 4139
+          },
+          {
+            "id": "1406008",
+            "name": "平台智造小方盒智能插线板-Pro版",
+            "desc": "内外兼修的充电利器，以一抵五，差旅标配",
+            "price": "79.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/a0d701292c4ca153e1800be83c4a7178.png",
+            "orderNum": 36
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "1028001",
+        "name": "乐器",
+        "picture": "https://yanxuan.nosdn.127.net/da0ac345e98c04594b697b56ebc373a5.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "4034793",
+            "name": "跟灯按弦超好玩碳纤维智能尤克里里",
+            "desc": "指板亮灯，指引按弦。可视化学习，更高效！还有更多游戏闯关，超有乐趣，不知不觉学会弹琴。",
+            "price": "599.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/62107ce9769183757d9a425af9f503df.jpg",
+            "orderNum": 2156
+          },
+          {
+            "id": "4033959",
+            "name": "3秒快速拆琴轻松保养odin奥丁12半音阶口琴",
+            "desc": "易吹性好按键灵敏音色优美全黑琴身",
+            "price": "329.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/937a8e46a9284e8f7e00e13911ecfbe7.png",
+            "orderNum": 4668
+          },
+          {
+            "id": "3993375",
+            "name": "云音乐定制IN系列intar民谣木吉他",
+            "desc": "云音乐2020in系列全新设计intar民谣木吉他",
+            "price": "625.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/4d825431a3587edb63cb165166f8fc76.jpg",
+            "orderNum": 485
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109243035",
+        "name": "手机配件",
+        "picture": "https://yanxuan.nosdn.127.net/0276d68f4b7a03bbd16675ada6e707ff.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "1484016",
+            "name": "新增iPhone13型号，编织纹手机壳",
+            "desc": "会呼吸的手机壳,iPhone13系列惊艳亮相",
+            "price": "11.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/5336b359d30b57c3266a325951b19aff.jpg",
+            "orderNum": 551
+          },
+          {
+            "id": "1480015",
+            "name": "双Type-C接口手机笔记本充电线（1米/2米）",
+            "desc": "2米加长，远程充电，差旅必备",
+            "price": "23.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/6e21780fd83f5a470e345286403983a6.jpg",
+            "orderNum": 9937
+          },
+          {
+            "id": "1193027",
+            "name": "MFI认证苹果快充数据线",
+            "desc": "网易智造苹果快充数据线（1米升级加固版）",
+            "price": "49.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/06d3a89ce18f0ae6360b9cd288084045.png",
+            "orderNum": 1646
+          },
+          {
+            "id": "3533020",
+            "name": "iPhone13/12系列PD20W高速快充数据线",
+            "desc": "MFI官方认证，PD闪电快充",
+            "price": "59.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/34dc5a4e3ff49b8988c26d88724b9d6a.png",
+            "orderNum": 764
+          },
+          {
+            "id": "1554052",
+            "name": "3D全屏高清iPhone手机钢化玻璃膜",
+            "desc": "进口材料，偏执工艺，玻璃潮流！",
+            "price": "59.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/16467db3236af1c2341bf7e5b40ac8a4.png",
+            "orderNum": 9220
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109243036",
+        "name": "车载用品",
+        "picture": "https://yanxuan.nosdn.127.net/3f45fbcdac7e8532b6a1570e6d7fe171.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "3844041",
+            "name": "一吸即净，车家多用，车载无线吸尘器",
+            "desc": "5分钟搞定车内清洁",
+            "price": "199.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/02dcab8b641999d575a18546851e8013.png",
+            "orderNum": 29
+          },
+          {
+            "id": "3827027",
+            "name": "吸尘除菌除味黑科技英国摩飞无线吸尘器",
+            "desc": "强劲吸尘，臭氧杀菌除味，立体空间净化",
+            "price": "328.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/67a8a549b68c9f7fcd3709b54d8c4d29.png",
+            "orderNum": 467
+          },
+          {
+            "id": "3440042",
+            "name": "超细纤维擦车厨房多用清洁抹布",
+            "desc": "超细纤维，清洁加倍不伤车身",
+            "price": "21.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/0c0691b4ac8c491142d6a74750c5c606.jpg",
+            "orderNum": 372
+          },
+          {
+            "id": "3994432",
+            "name": "平台严选x敦煌博物馆鹿游仙踪植萃车载香氛",
+            "desc": "复古敦煌色系，植萃天然香氛，安全健康孕婴可用",
+            "price": "33.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/15db90ea8c8c7456c1fee4e18abb25da.png",
+            "orderNum": 468
+          },
+          {
+            "id": "3992720",
+            "name": "旅途手机好伴侣，三合一车载手机支架",
+            "desc": "带安全锤和应急割刀的手机支架",
+            "price": "49.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/2245a3d6898361236babb66d834e19c8.jpg",
+            "orderNum": 26
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109243046",
+        "name": "办公文具",
+        "picture": "https://yanxuan.nosdn.127.net/801583d2f58274b13dc6a03daed1c3c9.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "1111002",
+            "name": "剪出精致感，金致圆柄复古剪刀",
+            "desc": "轻薄设计，简约大方",
+            "price": "9.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/4c6a9c8a579b00e5e9c7b002d15a33a2.jpg",
+            "orderNum": 515
+          },
+          {
+            "id": "3499024",
+            "name": "创意金属立体拼酷模型",
+            "desc": "凤舞龙翔呈现华丽视觉",
+            "price": "158.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/f3784ed01706f2f2722f12410a6429c9.png",
+            "orderNum": 490
+          },
+          {
+            "id": "1512000",
+            "name": "用心记录每一句诗，飞鸟集钢笔本册文具礼盒",
+            "desc": "谱写情谊之歌",
+            "price": "89.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/3892e311f3494d2bcc2c1f8ed9e34271.png",
+            "orderNum": 782
+          },
+          {
+            "id": "1458011",
+            "name": "谱写爱的篇章，莫扎特钢笔墨水礼盒",
+            "desc": "谱写爱的乐章",
+            "price": "88.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/b20165617d2f901e9ad926f39b737e87.png",
+            "orderNum": 406
+          },
+          {
+            "id": "3529022",
+            "name": "书源彩色按动中性笔",
+            "desc": "化繁为简，书写本源",
+            "price": "33.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/21216556e7d47a4e4277dcb36a16a486.png",
+            "orderNum": 489
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      }
+    ]
+  }
+}

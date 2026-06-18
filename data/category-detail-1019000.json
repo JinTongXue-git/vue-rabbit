@@ -1,0 +1,207 @@
+{
+  "code": "1",
+  "msg": "操作成功",
+  "result": {
+    "id": "1019000",
+    "name": "严选",
+    "picture": null,
+    "children": [
+      {
+        "id": "1065004",
+        "name": "滋补保健",
+        "picture": "https://yanxuan.nosdn.127.net/1e619a2b22f40bf83070e6f8f6e0c8ff.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "3988969",
+            "name": "新西兰珍宝麦卢卡蜂蜜MGO250+活性因子250g",
+            "desc": "直升机才能到达的原始森林蜜源地",
+            "price": "169.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/0de27b4a796b0385f9293e85a4b069d7.png",
+            "orderNum": 1267
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109256014",
+        "name": "床品家纺",
+        "picture": "https://yanxuan.nosdn.127.net/e6580910c1f98ed61bda867aeaf07929.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "3991211",
+            "name": "奢享丝滑睡眠，儿童真丝蚕丝被",
+            "desc": "100%桑蚕丝被芯，舒滑真丝被套",
+            "price": "1480.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/d66e9010b01c33eee075ed66f0822c36.png",
+            "orderNum": 588
+          },
+          {
+            "id": "3829130",
+            "name": "偏爱低枕选它泰国93%含量天然乳胶面包枕",
+            "desc": "专为偏爱低枕人群设计",
+            "price": "139.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/92e403c01eca5a2e34c8299a43b1f2e3.jpg",
+            "orderNum": 566
+          },
+          {
+            "id": "3828110",
+            "name": "泰国玻尿酸天然乳胶枕礼盒",
+            "desc": "泰国93%含量天然乳胶枕，玻尿酸天丝枕套",
+            "price": "205.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/a6890568768b97cae8e79b3d4391aab6.png",
+            "orderNum": 17
+          },
+          {
+            "id": "1683030",
+            "name": "泰国进口乳胶，儿童抗菌防螨护颈乳胶枕",
+            "desc": "4-12岁专利草珊瑚枕套，抑菌防螨净享睡眠",
+            "price": "149.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/76f9d1e6667dfbb08ab04f1ab8e1db5a.jpg",
+            "orderNum": 424
+          },
+          {
+            "id": "1672002",
+            "name": "睡着放松肩颈泰国93%天然乳胶枕蝶形护肩",
+            "desc": "强化肩颈支撑防螨抗菌新升级",
+            "price": "179.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/9790fcd540d6731ff7febd15ee60a7c5.png",
+            "orderNum": 498
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109256015",
+        "name": "锅具配件",
+        "picture": "https://yanxuan.nosdn.127.net/50ccbf04857e86cccf44d25da0577deb.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "4023839",
+            "name": "日本冰块冰球制冰模具",
+            "desc": "轻轻一拍，轻松取冰",
+            "price": "29.80",
+            "picture": "https://yanxuan-item.nosdn.127.net/2be38fc160992fe41f7d4a45bd0f90e5.png",
+            "orderNum": 14203
+          },
+          {
+            "id": "4011740",
+            "name": "抑菌保鲜黑科技泰国可微波冷冻食物保鲜盒",
+            "desc": "玻璃黑科技耐热耐寒微生物屏障抑菌更保鲜",
+            "price": "16.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/5c00d2a3c9c5263b04f6c01a576dfa71.jpg",
+            "orderNum": 1313
+          },
+          {
+            "id": "1091003",
+            "name": "优良密闭性日本创意多功能储米桶6kg容量",
+            "desc": "6kg超大容量，新旧米分离储存",
+            "price": "99.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/cec39a9588e8a2adc88447080b4462d2.png",
+            "orderNum": 25
+          },
+          {
+            "id": "3988148",
+            "name": "直接带盖进微波炉日本食物收纳保鲜盒",
+            "desc": "可冷藏可微波食品级树脂",
+            "price": "69.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/86c38b7caeb86dab0a5a5f0c8399ba32.png",
+            "orderNum": 527
+          },
+          {
+            "id": "3986195",
+            "name": "拯救整理强迫症密封防潮树脂收纳盒10件套",
+            "desc": "3对黑白大号加2对黑白小号",
+            "price": "115.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/6041e9bb949d80d491cf96c9d0ebcd4b.png",
+            "orderNum": 443
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109275000",
+        "name": "清洁用品",
+        "picture": "https://yanxuan.nosdn.127.net/926d919bc3e95f5c93dc5dc973faa378.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "4027998",
+            "name": "亮碟多效合一洗涤块495g",
+            "desc": "洗碗机专用，强力去污",
+            "price": "69.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/e07c2b63765cf9f4a46d489c6e09c1c1.jpg",
+            "orderNum": 11532
+          },
+          {
+            "id": "4010699",
+            "name": "除味净化神器Mootaa冰箱抑菌清洁剂250ml",
+            "desc": "除臭杀毒，持久保鲜，解决冰箱各种食材串味产生的难闻气味",
+            "price": "35.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/838c1b94f15e3b200bea21cef8989592.png",
+            "orderNum": 1205
+          },
+          {
+            "id": "4017718",
+            "name": "油污克星Mootaa重油污清洁剂",
+            "desc": "一喷快速溶解油污",
+            "price": "49.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/53a1579ead54c61a9b296d20c78a67ff.jpg",
+            "orderNum": 2042
+          },
+          {
+            "id": "3998109",
+            "name": "强力去垢不伤锅天然棕榈清洁刷长/短款",
+            "desc": "短柄针对顽渍，长柄清洁死角",
+            "price": "8.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/7537da93f26f0303d94c59f3889836ed.png",
+            "orderNum": 446
+          },
+          {
+            "id": "3990408",
+            "name": "1滴强力去污澳洲超浓缩不伤手洗洁精400ml",
+            "desc": "温和高效去污，一瓶可作多用",
+            "price": "17.90",
+            "picture": "https://yanxuan-item.nosdn.127.net/9ffdc0b1f6dbbe2e9f10a187444c01a3.png",
+            "orderNum": 13
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      },
+      {
+        "id": "109309012",
+        "name": "个护电器",
+        "picture": "https://yanxuan.nosdn.127.net/7a0eea3c515ad247c092749bcdd29855.png",
+        "parentId": null,
+        "parentName": null,
+        "goods": [
+          {
+            "id": "4000009",
+            "name": "医美级冰脱韩国Ulike蓝宝石脉冲光脱毛仪",
+            "desc": "蓝宝石冰点脱毛，高效更持久",
+            "price": "1599.00",
+            "picture": "https://yanxuan-item.nosdn.127.net/3567b2ac2526e6b89124f3fb62fd09d3.png",
+            "orderNum": 670
+          }
+        ],
+        "categories": null,
+        "brands": null,
+        "saleProperties": null
+      }
+    ]
+  }
+}
