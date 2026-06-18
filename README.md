@@ -51,6 +51,162 @@ pnpm dev
 
 ---
 
+好的，我直接把内容发给你，你复制到 README.md 的第 54 行位置（替换那些空行）：
+
+---
+
+```markdown
+---
+
+## 三、Nginx 部署指南
+
+### 3.1 部署步骤
+
+1. **构建项目**
+
+```bash
+pnpm build
+```
+
+构建完成后，会在项目根目录生成 `dist` 文件夹。
+
+2. **复制静态文件到 Nginx**
+
+将 `dist` 文件夹中的所有内容复制到 Nginx 的 `html` 目录下：
+
+```
+你的Nginx安装目录/html/
+├── index.html
+├── assets/
+│   ├── index-xxx.js
+│   └── index-xxx.css
+└── data/          # 如果有本地 JSON 数据
+    └── *.json
+```
+
+3. **配置 Nginx**
+
+将以下配置复制到你的 `nginx.conf` 文件中：
+
+```nginx
+#user  nobody;
+worker_processes  1;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+
+#pid        logs/nginx.pid;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    sendfile        on;
+    keepalive_timeout  65;
+
+    server {
+        listen       80;
+        server_name  localhost;
+        client_max_body_size 10m;
+        
+        # 前端项目部署配置
+        location / {
+            # ⚠️ 注意：这里需要修改为你自己的 Nginx 安装路径
+            root   D:/develop/nginx-1.22.0-web/html;
+            index  index.html index.htm;
+            try_files $uri $uri/ /index.html;
+        }
+
+        # API 反向代理配置（解决跨域问题）
+        location /api/ {
+            # 重写路径，去掉 /api 前缀
+            rewrite ^/api/(.*)$ /$1 break;
+            
+            # 代理到后端服务器
+            proxy_pass http://pcapi-xiaotuxian-front-devtest.itheima.net;
+            
+            # 保持主机头
+            proxy_set_header Host $host;
+            
+            # 允许跨域
+            proxy_set_header Origin "";
+            
+            # 超时设置
+            proxy_connect_timeout 10s;
+            proxy_send_timeout 10s;
+            proxy_read_timeout 10s;
+        }
+        
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            # ⚠️ 注意：这里需要修改为你自己的 Nginx 安装路径
+            root   D:/develop/nginx-1.22.0-web/html;
+        }
+    }
+}
+```
+
+4. **需要修改的地方**
+
+| 配置项 | 说明 | 示例 |
+|-------|------|------|
+| `root` | Nginx 静态文件目录 | `D:/develop/nginx-1.22.0-web/html` |
+| `listen` | 监听端口（可选） | 默认 `80`，可改为其他端口如 `8080` |
+
+> ⚠️ **重要**：将配置中所有 `D:/develop/nginx-1.22.0-web/html` 替换为你自己的 Nginx 安装路径下的 `html` 目录。
+
+5. **启动 Nginx**
+
+```bash
+# Windows 下启动
+nginx
+
+# 或者重新加载配置
+nginx -s reload
+```
+
+6. **访问项目**
+
+打开浏览器访问：`http://localhost`（如果修改了端口则访问 `http://localhost:端口号`）
+
+---
+
+## 四、项目技术栈
+```
+
+---
+
+把这段内容复制到你的 README.md 文件中，
+替换掉原来第 54-67 行的空行，然后把后面的 "
+三、项目技术栈" 改成 "四、项目技术栈" 即可。
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 三、项目技术栈
 
 ### 3.1 初始化时自动引入的技术栈

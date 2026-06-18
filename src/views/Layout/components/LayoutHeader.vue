@@ -8,7 +8,7 @@ import HeaderCart from '@/views/Layout/components/HeaderCart.vue'
   <header class='app-header'>
     <div class="container">
       <h1 class="logo">
-        <RouterLink to="/">小兔鲜</RouterLink>
+        <RouterLink to="/">刘晋良25510205088</RouterLink>
       </h1>
       <ul class="app-header-nav">
         <li class="home">
@@ -55,11 +55,26 @@ import HeaderCart from '@/views/Layout/components/HeaderCart.vue'
     width: 200px;
 
     a {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 132px;
       width: 100%;
-      text-indent: -9999px;
-      background: url('@/assets/images/logo.png') no-repeat center 18px / contain;
+      font-size: 22px;
+      font-weight: bold;
+      color: #ff6700;
+      letter-spacing: 4px;
+      text-decoration: none;
+      background: linear-gradient(135deg, #ff6700 0%, #ff9500 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        letter-spacing: 6px;
+      }
     }
   }
 

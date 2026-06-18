@@ -36,7 +36,10 @@ const {y} = useScroll(window)
     <!-- show 动态绑定class-->
   <div class="app-header-sticky" :class="{'show': y > 78}">
     <div class="container">
-      <RouterLink class="logo" to="/" />
+      <h1 class="logo">
+        <RouterLink to="/">阿里妈妈</RouterLink>
+      </h1>
+      <!-- <RouterLink class="logo" to="/" /> -->
       <!-- 导航区域 -->
       <ul class="app-header-nav ">
         <li class="home" >
@@ -85,6 +88,43 @@ const {y} = useScroll(window)
 
 
 <style scoped lang='scss'>
+
+.logo {
+    width: 200px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+      width: 100%;
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff6700;
+      letter-spacing: 4px;
+      text-decoration: none;
+      background: linear-gradient(135deg, #ff6700 0%, #ff9500 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        letter-spacing: 6px;
+      }
+    }
+}
+
+
+/*.logo {
+  width: 200px;
+  height: 80px;
+  background: url("@/assets/images/logo.png") no-repeat right 2px;
+  background-size: 160px auto;
+}*/
+
+
 .app-header-sticky {
   width: 100%;
   height: 80px;
@@ -111,12 +151,7 @@ const {y} = useScroll(window)
     align-items: center;
   }
 
-  .logo {
-    width: 200px;
-    height: 80px;
-    background: url("@/assets/images/logo.png") no-repeat right 2px;
-    background-size: 160px auto;
-  }
+  
 
   .right {
     width: 220px;
